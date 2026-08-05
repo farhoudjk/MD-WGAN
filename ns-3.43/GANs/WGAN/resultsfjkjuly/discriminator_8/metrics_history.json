@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 8,
+    "timestamp": 1752773709.8228316,
+    "latency": 201.32055759429932,
+    "cpu_usage": 124.79999999999998,
+    "memory_usage": 623.0546875,
+    "network_traffic": 96533,
+    "mean_score": 0.1496453583240509,
+    "loss": 0.8089885115623474
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752773711.9812334,
+    "latency": 203.95130610466003,
+    "cpu_usage": 123.77000000000001,
+    "memory_usage": 623.0,
+    "network_traffic": 96535,
+    "mean_score": -0.06349924951791763,
+    "loss": 1.005974531173706
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752774022.0068216,
+    "latency": 39.480478286743164,
+    "cpu_usage": 102.07000000000001,
+    "memory_usage": 622.99609375,
+    "network_traffic": 96018,
+    "mean_score": 0.288139671087265,
+    "loss": 1.0267162322998047
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752774200.6271415,
+    "latency": 124.14121198654175,
+    "cpu_usage": 121.45,
+    "memory_usage": 623.03515625,
+    "network_traffic": 95321,
+    "mean_score": -0.24752560257911682,
+    "loss": 0.5717006325721741
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752774474.218827,
+    "latency": 68.27653527259827,
+    "cpu_usage": 115.74999999999999,
+    "memory_usage": 622.765625,
+    "network_traffic": 95036,
+    "mean_score": 0.004034725483506918,
+    "loss": 0.5958505272865295
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752774617.315156,
+    "latency": 126.7282042503357,
+    "cpu_usage": 120.28,
+    "memory_usage": 623.01171875,
+    "network_traffic": 95199,
+    "mean_score": 0.1517772525548935,
+    "loss": 0.7493678331375122
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752774771.1428266,
+    "latency": 57.64863204956055,
+    "cpu_usage": 113.18999999999998,
+    "memory_usage": 622.34765625,
+    "network_traffic": 95323,
+    "mean_score": -0.18331150710582733,
+    "loss": 0.7982285618782043
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752775029.3998332,
+    "latency": 124.87656855583191,
+    "cpu_usage": 119.96,
+    "memory_usage": 622.6796875,
+    "network_traffic": 94742,
+    "mean_score": -0.050458863377571106,
+    "loss": 0.38350212574005127
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752775272.6445825,
+    "latency": 71.47878360748291,
+    "cpu_usage": 115.3,
+    "memory_usage": 623.015625,
+    "network_traffic": 93867,
+    "mean_score": -0.0489175021648407,
+    "loss": 0.9624350666999817
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752775437.1438308,
+    "latency": 122.337557554245,
+    "cpu_usage": 119.89999999999999,
+    "memory_usage": 623.4375,
+    "network_traffic": 93870,
+    "mean_score": 0.016584208235144615,
+    "loss": 0.47652745246887207
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752775621.2027886,
+    "latency": 47.13957238197327,
+    "cpu_usage": 107.08,
+    "memory_usage": 623.3203125,
+    "network_traffic": 93977,
+    "mean_score": -0.2221275120973587,
+    "loss": 0.5306095480918884
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752775849.2054665,
+    "latency": 130.445880651474,
+    "cpu_usage": 119.42999999999999,
+    "memory_usage": 623.16796875,
+    "network_traffic": 94563,
+    "mean_score": 0.22202302515506744,
+    "loss": 0.5343685150146484
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752776011.6210098,
+    "latency": 29.56534481048584,
+    "cpu_usage": 85.61,
+    "memory_usage": 623.3203125,
+    "network_traffic": 94499,
+    "mean_score": 0.1358647644519806,
+    "loss": 0.4151815176010132
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752776285.7499876,
+    "latency": 99.12044978141785,
+    "cpu_usage": 119.17,
+    "memory_usage": 623.16796875,
+    "network_traffic": 94161,
+    "mean_score": -0.19048991799354553,
+    "loss": 1.5605218410491943
+  },
+  {
+    "node_id": 8,
+    "timestamp": 1752776570.040964,
+    "latency": 42.544883728027344,
+    "cpu_usage": 108.07000000000001,
+    "memory_usage": 622.88671875,
+    "network_traffic": 93830,
+    "mean_score": -0.4513470232486725,
+    "loss": -0.2546979784965515
+  }
+]

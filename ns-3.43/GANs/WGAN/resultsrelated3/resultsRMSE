@@ -1,0 +1,123 @@
+
+==================================================
+SAMPLE EVALUATION WITH FIXED SCALING
+==================================================
+Comparing discriminator_1 vs hybrid_node_1 iter_1
+
+BEFORE NORMALIZATION:
+Real data sample:
+  position_x: mean=24.948, std=24.487, range=[-91.923, 89.100]
+  position_y: mean=922.459, std=573.593, range=[7.950, 2165.823]
+  speed: mean=23.342, std=16.366, range=[0.000, 68.280]
+Generated data sample:
+  position_x (col 4): mean=-0.023, std=0.049, range=[-0.182, 0.128]
+  position_y (col 5): mean=0.063, std=0.048, range=[-0.083, 0.218]
+  speed (col 11): mean=0.046, std=0.043, range=[-0.073, 0.172]
+
+AFTER NORMALIZATION - METRIC RESULTS:
+Overall RMSE: 1.088532
+Overall MAE:  0.970024
+
+Feature-wise Results:
+Feature         RMSE       MAE       
+-----------------------------------
+acceleration    0.448863   0.247121  
+position_y      1.560689   1.452245  
+spacing         0.881252   0.794502  
+speed           1.424874   1.316794  
+position_x      1.126980   1.039460  
+
+INTERPRETATION:
+RMSE 1.089: MODERATE: Generated data somewhat different from real data
+MAE  0.970: MODERATE: Average errors noticeable
+
+==================================================
+FULL EVALUATION WITH FIXED SCALING (RMSE + MAE)
+==================================================
+Progress: 20 comparisons, 20 successful, 0.2s elapsed
+Progress: 40 comparisons, 40 successful, 0.5s elapsed
+Progress: 60 comparisons, 60 successful, 0.7s elapsed
+Progress: 80 comparisons, 80 successful, 0.9s elapsed
+Progress: 100 comparisons, 100 successful, 1.2s elapsed
+Progress: 120 comparisons, 120 successful, 1.4s elapsed
+Progress: 140 comparisons, 140 successful, 1.6s elapsed
+Progress: 160 comparisons, 160 successful, 1.9s elapsed
+Progress: 180 comparisons, 180 successful, 2.1s elapsed
+Progress: 200 comparisons, 200 successful, 2.3s elapsed
+Progress: 220 comparisons, 220 successful, 2.6s elapsed
+Progress: 240 comparisons, 240 successful, 2.8s elapsed
+Progress: 260 comparisons, 260 successful, 3.0s elapsed
+Progress: 280 comparisons, 280 successful, 3.3s elapsed
+Progress: 300 comparisons, 300 successful, 3.5s elapsed
+Progress: 320 comparisons, 320 successful, 3.7s elapsed
+Progress: 340 comparisons, 340 successful, 4.0s elapsed
+Progress: 360 comparisons, 360 successful, 4.2s elapsed
+Progress: 380 comparisons, 380 successful, 4.4s elapsed
+Progress: 400 comparisons, 400 successful, 4.7s elapsed
+Progress: 420 comparisons, 420 successful, 4.9s elapsed
+Progress: 440 comparisons, 440 successful, 5.1s elapsed
+Progress: 460 comparisons, 460 successful, 5.4s elapsed
+Progress: 480 comparisons, 480 successful, 5.6s elapsed
+Progress: 500 comparisons, 500 successful, 5.8s elapsed
+
+Completed 500/500 comparisons
+
+==================================================
+FINAL RESULTS (NORMALIZED RMSE + MAE)
+==================================================
+OVERALL PERFORMANCE:
+   RMSE: 1.056394 +/- 0.019718
+   MAE:  0.952256 +/- 0.019435
+   Range RMSE: [0.969288, 1.142995]
+   Range MAE:  [0.863793, 1.038738]
+
+GENERATOR RANKINGS:
+   By RMSE (lower is better):
+   1st 1. hybrid_node_9: 1.043439 +/- 0.027057
+   2nd 2. hybrid_node_2: 1.045381 +/- 0.024567
+   3rd 3. hybrid_node_5: 1.048538 +/- 0.020415
+   4th 4. hybrid_node_1: 1.049383 +/- 0.024146
+   5th 5. hybrid_node_7: 1.049446 +/- 0.021076
+   6th 6. hybrid_node_13: 1.054048 +/- 0.016998
+   7th 7. hybrid_node_8: 1.055634 +/- 0.016355
+   8th 8. hybrid_node_15: 1.055851 +/- 0.011614
+   9th 9. hybrid_node_19: 1.056459 +/- 0.010356
+   10th 10. hybrid_node_6: 1.057257 +/- 0.013477
+   11th 11. hybrid_node_4: 1.057425 +/- 0.015169
+   12th 12. hybrid_node_20: 1.057532 +/- 0.019002
+   13th 13. hybrid_node_16: 1.057682 +/- 0.019050
+   14th 14. hybrid_node_17: 1.057716 +/- 0.014583
+   15th 15. hybrid_node_12: 1.057886 +/- 0.012311
+   16th 16. hybrid_node_14: 1.060845 +/- 0.013396
+   17th 17. hybrid_node_3: 1.060866 +/- 0.014229
+   18th 18. hybrid_node_10: 1.064209 +/- 0.021702
+   19th 19. hybrid_node_11: 1.068286 +/- 0.024608
+   20th 20. hybrid_node_18: 1.069997 +/- 0.018675
+   By MAE (lower is better):
+   1st 1. hybrid_node_9: 0.936831 +/- 0.026776
+   2nd 2. hybrid_node_2: 0.939621 +/- 0.024775
+   3rd 3. hybrid_node_7: 0.943751 +/- 0.020994
+   4th 4. hybrid_node_1: 0.944178 +/- 0.023851
+   5th 5. hybrid_node_5: 0.945671 +/- 0.019266
+   6th 6. hybrid_node_13: 0.948810 +/- 0.016210
+   7th 7. hybrid_node_8: 0.951309 +/- 0.014451
+   8th 8. hybrid_node_19: 0.951561 +/- 0.010153
+   9th 9. hybrid_node_17: 0.952108 +/- 0.012782
+   10th 10. hybrid_node_20: 0.952306 +/- 0.017836
+   11th 11. hybrid_node_15: 0.952557 +/- 0.010835
+   12th 12. hybrid_node_6: 0.952820 +/- 0.012880
+   13th 13. hybrid_node_4: 0.954509 +/- 0.015568
+   14th 14. hybrid_node_3: 0.955057 +/- 0.013002
+   15th 15. hybrid_node_12: 0.955378 +/- 0.010665
+   16th 16. hybrid_node_16: 0.957233 +/- 0.019511
+   17th 17. hybrid_node_10: 0.959012 +/- 0.019704
+   18th 18. hybrid_node_14: 0.959117 +/- 0.012571
+   19th 19. hybrid_node_11: 0.964272 +/- 0.023452
+   20th 20. hybrid_node_18: 0.969008 +/- 0.018540
+
+PERFORMANCE ASSESSMENT:
+   RMSE 1.056: MODERATE
+   MAE  0.952: MODERATE
+Results saved to ./rmse_mae_fixed_results
+  - Overall metrics: rmse_mae_results.csv
+  - Feature-wise: feature_wise_rmse_mae.csv

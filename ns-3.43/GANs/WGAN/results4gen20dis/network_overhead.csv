@@ -1,0 +1,4 @@
+TrafficType,Packets,Bytes,Percentage
+GAN Traffic,6475,2962498,13.78
+Background Traffic,64421,18531324,86.22
+Total,70896,21493822,100.0

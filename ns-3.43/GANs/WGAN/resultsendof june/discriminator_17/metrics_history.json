@@ -1,0 +1,142 @@
+[
+  {
+    "node_id": 17,
+    "timestamp": 1750787257.0385315,
+    "latency": 150.95550918579102,
+    "cpu_usage": 151.13,
+    "memory_usage": 624.140625,
+    "network_traffic": 96624,
+    "mean_score": 0.017901960760354996,
+    "loss": 0.6108795404434204
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750787257.462941,
+    "latency": 156.01916694641113,
+    "cpu_usage": 150.98999999999998,
+    "memory_usage": 624.45703125,
+    "network_traffic": 96623,
+    "mean_score": 0.12640662491321564,
+    "loss": 0.18907082080841064
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750787837.0447133,
+    "latency": 61.797343730926514,
+    "cpu_usage": 142.30000000000004,
+    "memory_usage": 624.33203125,
+    "network_traffic": 96003,
+    "mean_score": 0.06885777413845062,
+    "loss": 0.7001603245735168
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750787960.4348469,
+    "latency": 147.27828335762024,
+    "cpu_usage": 149.71999999999997,
+    "memory_usage": 624.65234375,
+    "network_traffic": 95982,
+    "mean_score": -0.1396518349647522,
+    "loss": 0.5617384314537048
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750788223.7776554,
+    "latency": 85.41550755500793,
+    "cpu_usage": 147.63,
+    "memory_usage": 624.04296875,
+    "network_traffic": 95073,
+    "mean_score": -0.03704759106040001,
+    "loss": 0.46897971630096436
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750788430.9725227,
+    "latency": 143.6066539287567,
+    "cpu_usage": 150.57000000000002,
+    "memory_usage": 624.25,
+    "network_traffic": 94529,
+    "mean_score": -0.15706950426101685,
+    "loss": 0.4714803099632263
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750788658.1095445,
+    "latency": 3.6106514930725098,
+    "cpu_usage": 13.780000000000001,
+    "memory_usage": 623.90234375,
+    "network_traffic": 94445,
+    "mean_score": -0.2748183310031891,
+    "loss": 1.050032615661621
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750788918.1125243,
+    "latency": 138.77061700820923,
+    "cpu_usage": 150.44000000000003,
+    "memory_usage": 624.328125,
+    "network_traffic": 94271,
+    "mean_score": -0.10295045375823975,
+    "loss": 0.44541674852371216
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750789381.1190348,
+    "latency": 144.6561677455902,
+    "cpu_usage": 153.92000000000002,
+    "memory_usage": 624.5859375,
+    "network_traffic": 94094,
+    "mean_score": 0.19858352839946747,
+    "loss": 1.283747673034668
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750789617.729649,
+    "latency": 100.47645425796509,
+    "cpu_usage": 148.55000000000004,
+    "memory_usage": 624.84375,
+    "network_traffic": 94097,
+    "mean_score": -0.560538113117218,
+    "loss": -0.05998849868774414
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750789853.4901392,
+    "latency": 148.19297647476196,
+    "cpu_usage": 152.44,
+    "memory_usage": 624.421875,
+    "network_traffic": 93971,
+    "mean_score": -0.23126919567584991,
+    "loss": 0.3921400308609009
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750790098.1762462,
+    "latency": 70.36384057998657,
+    "cpu_usage": 150.04,
+    "memory_usage": 624.234375,
+    "network_traffic": 94475,
+    "mean_score": 0.0006024284521117806,
+    "loss": 0.3557113707065582
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750790425.5166628,
+    "latency": 71.41548681259155,
+    "cpu_usage": 146.4,
+    "memory_usage": 624.390625,
+    "network_traffic": 94704,
+    "mean_score": 0.10008053481578827,
+    "loss": 1.3108043670654297
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750790654.8474615,
+    "latency": 64.843581199646,
+    "cpu_usage": 146.95000000000002,
+    "memory_usage": 624.484375,
+    "network_traffic": 94566,
+    "mean_score": 0.375402569770813,
+    "loss": 1.4761461019515991
+  }
+]

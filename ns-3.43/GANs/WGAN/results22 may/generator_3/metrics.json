@@ -1,0 +1,10 @@
+{
+  "node_id": 3,
+  "iteration": 41,
+  "latency": 4.087809324264526,
+  "cpu_usage": 4.81,
+  "memory_usage": 678.59765625,
+  "network_traffic": 287736,
+  "avg_disc_score": -0.040157960494980216,
+  "proxy_loss": -0.04718663915991783
+}

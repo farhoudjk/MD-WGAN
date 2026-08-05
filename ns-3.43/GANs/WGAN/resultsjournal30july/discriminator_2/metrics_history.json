@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 2,
+    "timestamp": 1753892504.0582228,
+    "latency": 226.58909583091736,
+    "cpu_usage": 156.66000000000003,
+    "memory_usage": 622.578125,
+    "network_traffic": 96895,
+    "mean_score": 0.010410686954855919,
+    "loss": -0.5812135338783264
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753892505.399321,
+    "latency": 227.3359613418579,
+    "cpu_usage": 157.45999999999998,
+    "memory_usage": 623.2265625,
+    "network_traffic": 96893,
+    "mean_score": -0.233799010515213,
+    "loss": -0.3255578279495239
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753893099.2002156,
+    "latency": 5.418450355529785,
+    "cpu_usage": 18.810000000000002,
+    "memory_usage": 622.69921875,
+    "network_traffic": 95367,
+    "mean_score": -0.2417207956314087,
+    "loss": -0.48883721232414246
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753893185.6884913,
+    "latency": 151.1802577972412,
+    "cpu_usage": 152.92999999999998,
+    "memory_usage": 622.78125,
+    "network_traffic": 95131,
+    "mean_score": -0.1579809933900833,
+    "loss": -0.6756565570831299
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753893422.837395,
+    "latency": 71.6839337348938,
+    "cpu_usage": 145.64000000000001,
+    "memory_usage": 623.421875,
+    "network_traffic": 95159,
+    "mean_score": -0.24807196855545044,
+    "loss": -0.22602057456970215
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753893707.487871,
+    "latency": 155.0523862838745,
+    "cpu_usage": 153.68,
+    "memory_usage": 622.90234375,
+    "network_traffic": 94711,
+    "mean_score": 0.10871891677379608,
+    "loss": 0.11061478406190872
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753894062.8897605,
+    "latency": 129.52658939361572,
+    "cpu_usage": 152.17000000000002,
+    "memory_usage": 623.39453125,
+    "network_traffic": 94091,
+    "mean_score": -0.17429186403751373,
+    "loss": -0.5732192993164062
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753894238.678759,
+    "latency": 152.9655532836914,
+    "cpu_usage": 153.83,
+    "memory_usage": 622.7109375,
+    "network_traffic": 93784,
+    "mean_score": 0.11715510487556458,
+    "loss": -0.10019316524267197
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753894541.672329,
+    "latency": 91.26589822769165,
+    "cpu_usage": 146.94,
+    "memory_usage": 622.72265625,
+    "network_traffic": 94260,
+    "mean_score": 0.3524373769760132,
+    "loss": -0.4530280828475952
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753894726.98375,
+    "latency": 150.18053770065308,
+    "cpu_usage": 152.38,
+    "memory_usage": 622.90625,
+    "network_traffic": 94569,
+    "mean_score": -0.6563157439231873,
+    "loss": -0.2594539523124695
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753894958.6787488,
+    "latency": 126.67754554748535,
+    "cpu_usage": 151.70999999999998,
+    "memory_usage": 623.2890625,
+    "network_traffic": 94567,
+    "mean_score": 0.617097795009613,
+    "loss": 0.20563969016075134
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753895223.9144793,
+    "latency": 146.90082931518555,
+    "cpu_usage": 151.76,
+    "memory_usage": 622.68359375,
+    "network_traffic": 94350,
+    "mean_score": 0.13908173143863678,
+    "loss": -0.2623084783554077
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753895482.850157,
+    "latency": 134.92221975326538,
+    "cpu_usage": 152.42,
+    "memory_usage": 622.7890625,
+    "network_traffic": 94457,
+    "mean_score": -0.08566915988922119,
+    "loss": -0.42617344856262207
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753895763.6901739,
+    "latency": 103.64514493942261,
+    "cpu_usage": 148.29,
+    "memory_usage": 622.6953125,
+    "network_traffic": 94380,
+    "mean_score": 0.08349005877971649,
+    "loss": -0.4913402795791626
+  },
+  {
+    "node_id": 2,
+    "timestamp": 1753895896.7079742,
+    "latency": 235.47035336494446,
+    "cpu_usage": 158.48,
+    "memory_usage": 623.1953125,
+    "network_traffic": 94380,
+    "mean_score": -0.5066821575164795,
+    "loss": -0.4887605309486389
+  }
+]

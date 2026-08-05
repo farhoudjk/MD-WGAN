@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 7,
+    "timestamp": 1752773609.4318328,
+    "latency": 121.0145001411438,
+    "cpu_usage": 120.17,
+    "memory_usage": 622.74609375,
+    "network_traffic": 96758,
+    "mean_score": -0.17750398814678192,
+    "loss": 0.20330363512039185
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752773608.692835,
+    "latency": 122.59452104568481,
+    "cpu_usage": 119.96,
+    "memory_usage": 622.71875,
+    "network_traffic": 96758,
+    "mean_score": -0.17077156901359558,
+    "loss": 0.9195723533630371
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752774016.8008285,
+    "latency": 35.79554581642151,
+    "cpu_usage": 94.46,
+    "memory_usage": 622.55859375,
+    "network_traffic": 96031,
+    "mean_score": -0.31815630197525024,
+    "loss": -0.04381474852561951
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752774167.2049513,
+    "latency": 106.88841009140015,
+    "cpu_usage": 119.46999999999998,
+    "memory_usage": 622.94921875,
+    "network_traffic": 95345,
+    "mean_score": -0.35293301939964294,
+    "loss": 0.44492989778518677
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752774468.7174132,
+    "latency": 61.737040519714355,
+    "cpu_usage": 112.50999999999999,
+    "memory_usage": 622.55078125,
+    "network_traffic": 94920,
+    "mean_score": -0.14878378808498383,
+    "loss": 0.25682544708251953
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752774581.8912976,
+    "latency": 108.80956292152405,
+    "cpu_usage": 120.19000000000001,
+    "memory_usage": 623.23828125,
+    "network_traffic": 95332,
+    "mean_score": 0.03996022045612335,
+    "loss": 1.049790859222412
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752774765.4581492,
+    "latency": 52.007216453552246,
+    "cpu_usage": 109.49,
+    "memory_usage": 622.65234375,
+    "network_traffic": 95141,
+    "mean_score": -0.2646726369857788,
+    "loss": 0.13429036736488342
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752774992.3072457,
+    "latency": 104.88212275505066,
+    "cpu_usage": 119.41000000000001,
+    "memory_usage": 622.91796875,
+    "network_traffic": 94712,
+    "mean_score": -0.006389424204826355,
+    "loss": 0.3216058611869812
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752775272.6058269,
+    "latency": 72.72360038757324,
+    "cpu_usage": 116.38,
+    "memory_usage": 622.98828125,
+    "network_traffic": 93919,
+    "mean_score": 0.023827338591217995,
+    "loss": 0.9675956964492798
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752775399.9995575,
+    "latency": 103.82883930206299,
+    "cpu_usage": 118.61000000000001,
+    "memory_usage": 622.91796875,
+    "network_traffic": 93733,
+    "mean_score": -0.5183090567588806,
+    "loss": 0.46078574657440186
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752775609.6178286,
+    "latency": 50.814597368240356,
+    "cpu_usage": 107.12,
+    "memory_usage": 622.5546875,
+    "network_traffic": 94191,
+    "mean_score": -0.11209918558597565,
+    "loss": 0.9962146878242493
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752775815.9471807,
+    "latency": 113.96681308746338,
+    "cpu_usage": 119.03999999999999,
+    "memory_usage": 623.30078125,
+    "network_traffic": 94688,
+    "mean_score": 0.1692226082086563,
+    "loss": 1.0773615837097168
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752776011.6471536,
+    "latency": 28.867207765579224,
+    "cpu_usage": 87.05,
+    "memory_usage": 622.953125,
+    "network_traffic": 94616,
+    "mean_score": -0.15867483615875244,
+    "loss": 0.7429215312004089
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752776262.1718285,
+    "latency": 18.775196313858032,
+    "cpu_usage": 65.89,
+    "memory_usage": 622.96875,
+    "network_traffic": 94096,
+    "mean_score": -0.4311201870441437,
+    "loss": -0.2410220205783844
+  },
+  {
+    "node_id": 7,
+    "timestamp": 1752776570.2482257,
+    "latency": 43.709250688552856,
+    "cpu_usage": 109.86,
+    "memory_usage": 623.28125,
+    "network_traffic": 93813,
+    "mean_score": 0.5606289505958557,
+    "loss": 0.9684036374092102
+  }
+]

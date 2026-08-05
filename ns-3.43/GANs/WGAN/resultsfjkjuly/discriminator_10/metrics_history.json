@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 10,
+    "timestamp": 1752773717.892196,
+    "latency": 202.01023840904236,
+    "cpu_usage": 123.88,
+    "memory_usage": 622.35546875,
+    "network_traffic": 96976,
+    "mean_score": 0.14196176826953888,
+    "loss": 0.8117518424987793
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752773716.8868296,
+    "latency": 203.2986011505127,
+    "cpu_usage": 124.25,
+    "memory_usage": 622.87109375,
+    "network_traffic": 96978,
+    "mean_score": -0.20016521215438843,
+    "loss": 0.26411157846450806
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752774029.1172097,
+    "latency": 34.35367441177368,
+    "cpu_usage": 90.41000000000001,
+    "memory_usage": 623.06640625,
+    "network_traffic": 95684,
+    "mean_score": -0.21167105436325073,
+    "loss": 0.08480629324913025
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752774208.5472813,
+    "latency": 125.1704318523407,
+    "cpu_usage": 119.63000000000001,
+    "memory_usage": 622.9140625,
+    "network_traffic": 95385,
+    "mean_score": -0.3225792646408081,
+    "loss": 0.4612000286579132
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752774473.5228243,
+    "latency": 68.5845742225647,
+    "cpu_usage": 115.78999999999999,
+    "memory_usage": 622.6484375,
+    "network_traffic": 95006,
+    "mean_score": -0.10025414824485779,
+    "loss": 0.8082426190376282
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752774619.9388297,
+    "latency": 125.65557670593262,
+    "cpu_usage": 120.35,
+    "memory_usage": 623.06640625,
+    "network_traffic": 95310,
+    "mean_score": -0.07155970484018326,
+    "loss": 1.3906837701797485
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752774790.7063923,
+    "latency": 67.6329939365387,
+    "cpu_usage": 116.21000000000001,
+    "memory_usage": 622.7265625,
+    "network_traffic": 95247,
+    "mean_score": -0.0986812561750412,
+    "loss": 0.9511157274246216
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752775034.2686982,
+    "latency": 121.32674527168274,
+    "cpu_usage": 118.55000000000001,
+    "memory_usage": 623.01171875,
+    "network_traffic": 94660,
+    "mean_score": -0.0499725416302681,
+    "loss": 0.7973453402519226
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752775280.151435,
+    "latency": 74.74498391151428,
+    "cpu_usage": 116.52,
+    "memory_usage": 623.0859375,
+    "network_traffic": 94074,
+    "mean_score": -0.12159203737974167,
+    "loss": 0.8549327254295349
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752775443.2598248,
+    "latency": 117.11858463287354,
+    "cpu_usage": 119.5,
+    "memory_usage": 622.70703125,
+    "network_traffic": 93925,
+    "mean_score": -0.27756667137145996,
+    "loss": 0.2902980446815491
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752775645.8258233,
+    "latency": 28.012455940246582,
+    "cpu_usage": 82.16999999999999,
+    "memory_usage": 622.81640625,
+    "network_traffic": 94122,
+    "mean_score": 0.047839775681495667,
+    "loss": 0.6711780428886414
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752775855.9378436,
+    "latency": 126.34567403793335,
+    "cpu_usage": 120.3,
+    "memory_usage": 622.65234375,
+    "network_traffic": 94503,
+    "mean_score": -0.16295962035655975,
+    "loss": 0.42305779457092285
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752776016.0869482,
+    "latency": 30.729408025741577,
+    "cpu_usage": 87.71000000000001,
+    "memory_usage": 621.15234375,
+    "network_traffic": 94683,
+    "mean_score": 0.22083839774131775,
+    "loss": 0.945164680480957
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752776286.775838,
+    "latency": 101.1826536655426,
+    "cpu_usage": 118.04,
+    "memory_usage": 618.48046875,
+    "network_traffic": 94195,
+    "mean_score": 0.501387894153595,
+    "loss": 1.2555747032165527
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1752776577.0248463,
+    "latency": 39.9371223449707,
+    "cpu_usage": 96.67999999999999,
+    "memory_usage": 623.0078125,
+    "network_traffic": 93627,
+    "mean_score": -0.3576428294181824,
+    "loss": 0.8141031861305237
+  }
+]

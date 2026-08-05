@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 16,
+    "timestamp": 1750787232.82883,
+    "latency": 117.91524720191956,
+    "cpu_usage": 146.33,
+    "memory_usage": 624.4609375,
+    "network_traffic": 97089,
+    "mean_score": -0.05739540606737137,
+    "loss": 0.49815717339515686
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750787232.8071287,
+    "latency": 118.93693923950195,
+    "cpu_usage": 147.35000000000002,
+    "memory_usage": 624.1484375,
+    "network_traffic": 97089,
+    "mean_score": -0.08132446557283401,
+    "loss": 0.9311654567718506
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750787837.1546793,
+    "latency": 63.182361125946045,
+    "cpu_usage": 145.7,
+    "memory_usage": 624.41015625,
+    "network_traffic": 96187,
+    "mean_score": -0.1826734095811844,
+    "loss": 0.30500730872154236
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750787948.9962795,
+    "latency": 94.34245944023132,
+    "cpu_usage": 143.65,
+    "memory_usage": 624.61328125,
+    "network_traffic": 96235,
+    "mean_score": 0.05053745582699776,
+    "loss": 0.1632758527994156
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750788216.960544,
+    "latency": 2.0796010494232178,
+    "cpu_usage": 6.530000000000001,
+    "memory_usage": 623.86328125,
+    "network_traffic": 95166,
+    "mean_score": 0.06518353521823883,
+    "loss": 0.8813105821609497
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750788420.9415283,
+    "latency": 106.58455014228821,
+    "cpu_usage": 145.37,
+    "memory_usage": 624.515625,
+    "network_traffic": 94610,
+    "mean_score": -0.26995235681533813,
+    "loss": 0.5969195365905762
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750788654.5919836,
+    "latency": 2.517273426055908,
+    "cpu_usage": 9.169999999999998,
+    "memory_usage": 623.42578125,
+    "network_traffic": 94492,
+    "mean_score": 0.3696430027484894,
+    "loss": 1.1361132860183716
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750788906.4670372,
+    "latency": 81.3111252784729,
+    "cpu_usage": 131.92,
+    "memory_usage": 624.2109375,
+    "network_traffic": 94468,
+    "mean_score": -0.16551214456558228,
+    "loss": 0.9321419596672058
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750789253.8140347,
+    "latency": 1.6660635471343994,
+    "cpu_usage": 3.2899999999999996,
+    "memory_usage": 623.76171875,
+    "network_traffic": 94347,
+    "mean_score": 0.137813001871109,
+    "loss": 0.6089903116226196
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750789369.2591307,
+    "latency": 97.4648084640503,
+    "cpu_usage": 144.32,
+    "memory_usage": 624.328125,
+    "network_traffic": 94066,
+    "mean_score": -0.5337784290313721,
+    "loss": 0.03576117753982544
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750789612.139637,
+    "latency": 86.88447308540344,
+    "cpu_usage": 144.36,
+    "memory_usage": 624.625,
+    "network_traffic": 93966,
+    "mean_score": -0.39085131883621216,
+    "loss": 0.3902035057544708
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750789843.162671,
+    "latency": 114.93528532981873,
+    "cpu_usage": 150.47,
+    "memory_usage": 624.0078125,
+    "network_traffic": 94162,
+    "mean_score": 0.012757077813148499,
+    "loss": 0.8042634725570679
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750790098.1174142,
+    "latency": 41.262112855911255,
+    "cpu_usage": 91.36999999999999,
+    "memory_usage": 624.42578125,
+    "network_traffic": 94443,
+    "mean_score": -0.14940288662910461,
+    "loss": 0.787784218788147
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750790388.3039155,
+    "latency": 54.86320614814758,
+    "cpu_usage": 140.84000000000003,
+    "memory_usage": 624.2890625,
+    "network_traffic": 94571,
+    "mean_score": -0.11984964460134506,
+    "loss": 0.49110251665115356
+  },
+  {
+    "node_id": 16,
+    "timestamp": 1750790654.7282631,
+    "latency": 56.06527328491211,
+    "cpu_usage": 128.38,
+    "memory_usage": 624.859375,
+    "network_traffic": 94690,
+    "mean_score": -0.5976373553276062,
+    "loss": 0.4945491552352905
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 10,
+    "timestamp": 1750787389.1345384,
+    "latency": 254.10956144332886,
+    "cpu_usage": 152.59999999999997,
+    "memory_usage": 621.2265625,
+    "network_traffic": 96945,
+    "mean_score": 0.10836247354745865,
+    "loss": 0.9524670839309692
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750787391.7205303,
+    "latency": 253.4166021347046,
+    "cpu_usage": 150.47,
+    "memory_usage": 620.9140625,
+    "network_traffic": 96446,
+    "mean_score": -0.08428793400526047,
+    "loss": 1.5336027145385742
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750787679.155961,
+    "latency": 97.1141345500946,
+    "cpu_usage": 148.85,
+    "memory_usage": 622.84765625,
+    "network_traffic": 96301,
+    "mean_score": -0.2472439557313919,
+    "loss": 0.701084554195404
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750788006.1579733,
+    "latency": 158.42899346351624,
+    "cpu_usage": 146.23999999999998,
+    "memory_usage": 622.95703125,
+    "network_traffic": 95336,
+    "mean_score": -0.10171042382717133,
+    "loss": 0.6086759567260742
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750788184.8487248,
+    "latency": 27.949309825897217,
+    "cpu_usage": 102.66000000000001,
+    "memory_usage": 622.97265625,
+    "network_traffic": 94829,
+    "mean_score": -0.022930363193154335,
+    "loss": 1.0477874279022217
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750788473.1958985,
+    "latency": 160.2972526550293,
+    "cpu_usage": 149.21,
+    "memory_usage": 622.84765625,
+    "network_traffic": 95015,
+    "mean_score": -0.25974300503730774,
+    "loss": 0.6057195663452148
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750788825.8255239,
+    "latency": 50.41953468322754,
+    "cpu_usage": 133.32999999999998,
+    "memory_usage": 621.09765625,
+    "network_traffic": 95056,
+    "mean_score": 0.5736184120178223,
+    "loss": 0.6277459263801575
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750788960.9495375,
+    "latency": 157.92350912094116,
+    "cpu_usage": 151.13000000000002,
+    "memory_usage": 622.65234375,
+    "network_traffic": 94831,
+    "mean_score": -0.4927917420864105,
+    "loss": 0.32824769616127014
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750789136.0920205,
+    "latency": 113.47100114822388,
+    "cpu_usage": 152.47,
+    "memory_usage": 623.421875,
+    "network_traffic": 95022,
+    "mean_score": -0.4798104763031006,
+    "loss": 0.7223313450813293
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750789422.7175179,
+    "latency": 162.7457139492035,
+    "cpu_usage": 154.04,
+    "memory_usage": 622.92578125,
+    "network_traffic": 94686,
+    "mean_score": -0.02604658529162407,
+    "loss": 0.27268731594085693
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750789619.591191,
+    "latency": 101.8428544998169,
+    "cpu_usage": 152.16,
+    "memory_usage": 622.7890625,
+    "network_traffic": 95419,
+    "mean_score": -0.508875846862793,
+    "loss": 0.16933482885360718
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750789902.1155365,
+    "latency": 163.95887756347656,
+    "cpu_usage": 154.21,
+    "memory_usage": 622.421875,
+    "network_traffic": 95376,
+    "mean_score": -0.4328898787498474,
+    "loss": 0.6009849309921265
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750790171.6375477,
+    "latency": 98.83600997924805,
+    "cpu_usage": 149.56,
+    "memory_usage": 621.484375,
+    "network_traffic": 95420,
+    "mean_score": -0.45471662282943726,
+    "loss": 0.8305468559265137
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750790486.329527,
+    "latency": 137.18159413337708,
+    "cpu_usage": 151.46,
+    "memory_usage": 622.7109375,
+    "network_traffic": 95189,
+    "mean_score": -0.32334864139556885,
+    "loss": 0.5011228919029236
+  },
+  {
+    "node_id": 10,
+    "timestamp": 1750790753.9820304,
+    "latency": 137.91410517692566,
+    "cpu_usage": 151.53000000000003,
+    "memory_usage": 622.51171875,
+    "network_traffic": 95088,
+    "mean_score": -0.061698153614997864,
+    "loss": 1.0387303829193115
+  }
+]

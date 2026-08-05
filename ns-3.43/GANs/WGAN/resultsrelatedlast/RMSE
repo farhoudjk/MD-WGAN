@@ -1,0 +1,30 @@
+==================================================
+FINAL RESULTS (NORMALIZED RMSE)
+==================================================
+Overall Mean RMSE: 2.145947
+Overall Std RMSE: 0.088022
+Overall Min RMSE: 1.989555
+Overall Max RMSE: 2.405542
+
+Generator Performance:
+hybrid_node_1: Mean=2.123623, Std=0.080760
+hybrid_node_2: Mean=2.151867, Std=0.078893
+hybrid_node_3: Mean=2.127784, Std=0.079321
+hybrid_node_4: Mean=2.188140, Std=0.080708
+hybrid_node_5: Mean=2.173688, Std=0.083374
+hybrid_node_6: Mean=2.179471, Std=0.083341
+hybrid_node_7: Mean=2.162623, Std=0.078435
+hybrid_node_8: Mean=2.123607, Std=0.079959
+hybrid_node_9: Mean=2.165679, Std=0.078856
+hybrid_node_10: Mean=2.097200, Std=0.086224
+hybrid_node_11: Mean=2.177437, Std=0.079954
+hybrid_node_12: Mean=2.179061, Std=0.079442
+hybrid_node_13: Mean=2.162073, Std=0.077929
+hybrid_node_14: Mean=2.109615, Std=0.082773
+hybrid_node_15: Mean=2.103995, Std=0.085797
+hybrid_node_16: Mean=2.208413, Std=0.083603
+hybrid_node_17: Mean=2.104107, Std=0.082394
+hybrid_node_18: Mean=2.132145, Std=0.079210
+hybrid_node_19: Mean=2.090888, Std=0.086899
+hybrid_node_20: Mean=2.157532, Std=0.078753
+Results saved to ./rmse_fixed_results

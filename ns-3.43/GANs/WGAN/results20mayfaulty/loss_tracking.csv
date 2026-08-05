@@ -1,0 +1,4 @@
+Timestamp,NodeType,NodeID,LossValue,Improved
+1747769897,Generator,4,9.09,No
+1747769900,Generator,1,2.81,Yes
+1747769900,Generator,4,9999,No

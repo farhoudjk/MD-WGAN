@@ -1,0 +1,9 @@
+{
+  "node_id": 14,
+  "latency": 128.20822763442993,
+  "cpu_usage": 121.02,
+  "memory_usage": 624.1953125,
+  "network_traffic": 94741,
+  "mean_score": -0.3960670828819275,
+  "loss": 0.4459746778011322
+}

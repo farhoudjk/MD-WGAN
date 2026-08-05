@@ -1,0 +1,15 @@
+[
+  {
+    "node_id": 10,
+    "iteration": 1,
+    "timestamp": 1752764000.1021261,
+    "latency": 24.09626817703247,
+    "cpu_usage": 35.17,
+    "memory_usage": 644.234375,
+    "network_traffic": 104304,
+    "gen_loss": -0.023470512901743252,
+    "disc_loss": 8.986689949035645,
+    "real_score_mean": -0.011949833482503891,
+    "fake_score_mean": 0.02216084487736225,
+    "score_difference": -0.03411067835986614,
+    "diversity_score": 

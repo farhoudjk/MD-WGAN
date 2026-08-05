@@ -1,0 +1,10 @@
+{
+  "node_id": 17,
+  "timestamp": 1750785740.3794284,
+  "latency": 36.621705293655396,
+  "cpu_usage": 103.06,
+  "memory_usage": 624.0,
+  "network_traffic": 94081,
+  "mean_score": 0.0193346980959177,
+  "loss": 0.6545056104660034
+}

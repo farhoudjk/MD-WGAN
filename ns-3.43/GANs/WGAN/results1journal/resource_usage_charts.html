@@ -1,0 +1,882 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Usage Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        canvas { margin: 20px 0; max-width: 600px; }
+    </style>
+</head>
+<body>
+    <h1>Resource Usage Charts</h1>
+
+    <canvas id="generator_1_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_1_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 31"], "datasets": [{"label": "Latency (s)", "data": [4.54990029335022], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 1 Latency"}}}
+        });
+    </script>
+
+    <canvas id="generator_1_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_1_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 31"], "datasets": [{"label": "CPU Usage (s)", "data": [5.109999999999999], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 1 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_1_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_1_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 31"], "datasets": [{"label": "Memory Usage (MB)", "data": [644.14453125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Generator 1 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_1_network"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_1_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 31"], "datasets": [{"label": "Network Traffic (bytes)", "data": [283593], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Generator 1 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="generator_2_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_2_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 17"], "datasets": [{"label": "Latency (s)", "data": [65.91093373298645], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 2 Latency"}}}
+        });
+    </script>
+
+    <canvas id="generator_2_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_2_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 17"], "datasets": [{"label": "CPU Usage (s)", "data": [42.79], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 2 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_2_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_2_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 17"], "datasets": [{"label": "Memory Usage (MB)", "data": [646.9765625], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Generator 2 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_2_network"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_2_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 17"], "datasets": [{"label": "Network Traffic (bytes)", "data": [283831], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Generator 2 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="generator_3_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_3_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 26"], "datasets": [{"label": "Latency (s)", "data": [4.3095152378082275], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 3 Latency"}}}
+        });
+    </script>
+
+    <canvas id="generator_3_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_3_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 26"], "datasets": [{"label": "CPU Usage (s)", "data": [5.389999999999999], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 3 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_3_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_3_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 26"], "datasets": [{"label": "Memory Usage (MB)", "data": [652.41796875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Generator 3 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_3_network"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_3_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 26"], "datasets": [{"label": "Network Traffic (bytes)", "data": [284024], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Generator 3 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="generator_4_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_4_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 21"], "datasets": [{"label": "Latency (s)", "data": [35.2613627910614], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 4 Latency"}}}
+        });
+    </script>
+
+    <canvas id="generator_4_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_4_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 21"], "datasets": [{"label": "CPU Usage (s)", "data": [38.589999999999996], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Generator 4 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_4_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_4_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 21"], "datasets": [{"label": "Memory Usage (MB)", "data": [670.94921875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Generator 4 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="generator_4_network"></canvas>
+    <script>
+        new Chart(document.getElementById('generator_4_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 21"], "datasets": [{"label": "Network Traffic (bytes)", "data": [284069], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Generator 4 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_1_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_1_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [73.37809610366821], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 1 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_1_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_1_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [110.8], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 1 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_1_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_1_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [612.03125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 1 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_1_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_1_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [95043], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 1 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_2_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_2_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [108.84334588050842], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 2 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_2_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_2_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [118.42999999999999], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 2 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_2_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_2_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [622.7578125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 2 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_2_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_2_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [95097], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 2 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_3_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_3_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [129.09431338310242], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 3 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_3_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_3_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [119.65], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 3 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_3_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_3_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [621.17578125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 3 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_3_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_3_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94950], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 3 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_4_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_4_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [127.94589686393738], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 4 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_4_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_4_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [119.59], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 4 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_4_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_4_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [622.23828125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 4 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_4_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_4_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [95066], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 4 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_5_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_5_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [125.27437424659729], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 5 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_5_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_5_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [120.11], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 5 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_5_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_5_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [621.05859375], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 5 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_5_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_5_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94947], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 5 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_6_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_6_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [77.86891627311707], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 6 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_6_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_6_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [113.37], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 6 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_6_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_6_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [623.28515625], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 6 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_6_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_6_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94717], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 6 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_7_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_7_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [106.86833667755127], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 7 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_7_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_7_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [118.21000000000001], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 7 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_7_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_7_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [622.6328125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 7 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_7_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_7_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94585], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 7 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_8_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_8_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [125.66229319572449], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 8 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_8_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_8_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [120.63], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 8 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_8_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_8_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [622.8671875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 8 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_8_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_8_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94618], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 8 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_9_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_9_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [128.46811413764954], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 9 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_9_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_9_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [120.37], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 9 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_9_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_9_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [622.4140625], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 9 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_9_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_9_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94651], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 9 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_10_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_10_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [126.09907364845276], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 10 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_10_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_10_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [118.52000000000001], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 10 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_10_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_10_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [622.421875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 10 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_10_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_10_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94521], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 10 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_11_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_11_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [78.16548466682434], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 11 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_11_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_11_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [112.92], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 11 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_11_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_11_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.69921875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 11 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_11_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_11_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94940], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 11 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_12_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_12_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [107.16293835639954], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 12 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_12_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_12_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [118.76], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 12 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_12_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_12_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.31640625], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 12 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_12_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_12_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94861], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 12 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_13_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_13_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [127.98455953598022], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 13 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_13_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_13_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [120.08], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 13 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_13_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_13_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.0625], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 13 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_13_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_13_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94841], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 13 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_14_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_14_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [128.20822763442993], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 14 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_14_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_14_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [121.02], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 14 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_14_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_14_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.1953125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 14 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_14_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_14_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94741], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 14 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_15_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_15_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [125.04954242706299], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 15 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_15_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_15_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [118.88000000000001], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 15 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_15_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_15_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.56640625], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 15 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_15_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_15_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94758], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 15 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_16_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_16_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [5.836515665054321], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 16 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_16_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_16_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [26.130000000000003], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 16 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_16_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_16_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [623.93359375], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 16 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_16_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_16_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94839], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 16 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_17_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_17_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [5.804630279541016], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 17 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_17_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_17_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [26.16], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 17 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_17_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_17_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.1171875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 17 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_17_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_17_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94686], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 17 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_18_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_18_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [2.52756667137146], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 18 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_18_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_18_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [8.89], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 18 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_18_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_18_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [623.86328125], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 18 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_18_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_18_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94727], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 18 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_19_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_19_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [128.33211636543274], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 19 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_19_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_19_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [120.19], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 19 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_19_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_19_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.26171875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 19 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_19_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_19_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94657], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 19 Network Traffic"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_20_latency"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_20_latency'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Latency (s)", "data": [127.7379002571106], "backgroundColor": "#FF6384", "borderColor": "#FF6384", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Latency (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 20 Latency"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_20_cpu"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_20_cpu'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "CPU Usage (s)", "data": [120.1], "backgroundColor": "#36A2EB", "borderColor": "#36A2EB", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "CPU Usage (s)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 20 CPU Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_20_memory"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_20_memory'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Memory Usage (MB)", "data": [624.21875], "backgroundColor": "#FFCE56", "borderColor": "#FFCE56", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Memory Usage (MB)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 20 Memory Usage"}}}
+        });
+    </script>
+
+    <canvas id="discriminator_20_network"></canvas>
+    <script>
+        new Chart(document.getElementById('discriminator_20_network'), {
+            type: 'line',
+            data: {"labels": ["Iteration 1"], "datasets": [{"label": "Network Traffic (bytes)", "data": [94698], "backgroundColor": "#4BC0C0", "borderColor": "#4BC0C0", "borderWidth": 1, "fill": false}]},
+            options: {"scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Network Traffic (bytes)"}}}, "plugins": {"title": {"display": true, "text": "Discriminator 20 Network Traffic"}}}
+        });
+    </script>
+
+</body>
+</html>

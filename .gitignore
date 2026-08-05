@@ -1,0 +1,40 @@
+# Python virtual environments
+myenv/
+venv/
+.venv/
+
+# Build artifacts
+build/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Model files
+*.gguf
+*.safetensors
+*.bin
+
+# Hugging Face / model caches
+.cache/
+huggingface/
+
+# Compiled libraries
+*.so
+*.so.*
+*.a
+
+# Logs / generated output
+*.log
+
+# OS
+.DS_Store
+
+# Large generated files
+*.txt
+*.log
+*.pcap
+*.pcapng
+
+# Files larger than ~100MB should generally not be committed

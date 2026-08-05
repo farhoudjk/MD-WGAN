@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 14,
+    "timestamp": 1752773710.971228,
+    "latency": 201.31413984298706,
+    "cpu_usage": 124.27000000000001,
+    "memory_usage": 624.36328125,
+    "network_traffic": 96966,
+    "mean_score": 0.04096168652176857,
+    "loss": 0.6343027949333191
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752773712.491224,
+    "latency": 203.14017152786255,
+    "cpu_usage": 123.32000000000001,
+    "memory_usage": 624.24609375,
+    "network_traffic": 96967,
+    "mean_score": 0.09525999426841736,
+    "loss": 0.5590248703956604
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752773946.7942884,
+    "latency": 70.43213534355164,
+    "cpu_usage": 115.96000000000001,
+    "memory_usage": 624.34375,
+    "network_traffic": 96769,
+    "mean_score": 0.2868916988372803,
+    "loss": 0.6066706776618958
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752774203.9488318,
+    "latency": 126.67146611213684,
+    "cpu_usage": 120.36999999999999,
+    "memory_usage": 625.00390625,
+    "network_traffic": 95543,
+    "mean_score": -0.18866512179374695,
+    "loss": 0.40042370557785034
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752774363.2849743,
+    "latency": 85.722403049469,
+    "cpu_usage": 116.21000000000001,
+    "memory_usage": 624.03125,
+    "network_traffic": 95541,
+    "mean_score": -0.44560307264328003,
+    "loss": 0.2760572135448456
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752774618.7232144,
+    "latency": 125.91903328895569,
+    "cpu_usage": 120.63,
+    "memory_usage": 623.94921875,
+    "network_traffic": 95290,
+    "mean_score": 0.37267133593559265,
+    "loss": 0.8656302094459534
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752774915.860195,
+    "latency": 34.35259962081909,
+    "cpu_usage": 100.36,
+    "memory_usage": 624.23828125,
+    "network_traffic": 95189,
+    "mean_score": -0.27875131368637085,
+    "loss": 0.45762231945991516
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752775029.991824,
+    "latency": 122.7526044845581,
+    "cpu_usage": 118.7,
+    "memory_usage": 624.6015625,
+    "network_traffic": 95387,
+    "mean_score": 0.15761834383010864,
+    "loss": 0.7656680345535278
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752775175.2335618,
+    "latency": 69.47984957695007,
+    "cpu_usage": 115.56,
+    "memory_usage": 624.41015625,
+    "network_traffic": 95340,
+    "mean_score": 0.157675638794899,
+    "loss": 0.7964426875114441
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752775435.3471599,
+    "latency": 120.76938652992249,
+    "cpu_usage": 120.38,
+    "memory_usage": 624.33984375,
+    "network_traffic": 95120,
+    "mean_score": -0.2382696121931076,
+    "loss": 0.7908816933631897
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752775584.5818295,
+    "latency": 57.03952646255493,
+    "cpu_usage": 113.93,
+    "memory_usage": 624.328125,
+    "network_traffic": 95119,
+    "mean_score": 0.0669018030166626,
+    "loss": 0.6951128840446472
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752775848.105465,
+    "latency": 129.67694878578186,
+    "cpu_usage": 119.32000000000001,
+    "memory_usage": 624.40234375,
+    "network_traffic": 95036,
+    "mean_score": -0.629650890827179,
+    "loss": 0.4935246407985687
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752776154.0279014,
+    "latency": 27.7767972946167,
+    "cpu_usage": 90.36999999999999,
+    "memory_usage": 624.2265625,
+    "network_traffic": 94515,
+    "mean_score": -0.20696790516376495,
+    "loss": 0.6972811222076416
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752776285.7855775,
+    "latency": 99.66730880737305,
+    "cpu_usage": 118.68,
+    "memory_usage": 624.25390625,
+    "network_traffic": 94291,
+    "mean_score": -0.010415672324597836,
+    "loss": 0.7396882772445679
+  },
+  {
+    "node_id": 14,
+    "timestamp": 1752776426.0638313,
+    "latency": 58.96749687194824,
+    "cpu_usage": 113.12000000000002,
+    "memory_usage": 624.32421875,
+    "network_traffic": 94247,
+    "mean_score": -0.11874812096357346,
+    "loss": 0.9439660906791687
+  }
+]

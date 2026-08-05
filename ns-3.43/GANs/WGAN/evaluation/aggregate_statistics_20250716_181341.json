@@ -1,0 +1,20 @@
+{
+  "mean_error": {
+    "mean": Infinity,
+    "std": 0.0,
+    "min": Infinity,
+    "max": -Infinity,
+    "median": Infinity,
+    "q25": Infinity,
+    "q75": Infinity
+  },
+  "correlation_error": {
+    "mean": Infinity,
+    "std": 0.0,
+    "min": Infinity,
+    "max": -Infinity,
+    "median": Infinity,
+    "q25": Infinity,
+    "q75": Infinity
+  }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "node_id": 17,
+    "timestamp": 1750783734.4885209,
+    "latency": 208.44854617118835,
+    "cpu_usage": 154.97,
+    "memory_usage": 623.859375,
+    "network_traffic": 96920,
+    "mean_score": -0.16210061311721802,
+    "loss": 0.7060070037841797
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750783734.4415238,
+    "latency": 212.83058404922485,
+    "cpu_usage": 152.60999999999999,
+    "memory_usage": 624.546875,
+    "network_traffic": 96918,
+    "mean_score": 0.08146640658378601,
+    "loss": 0.6464741826057434
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750784214.019528,
+    "latency": 108.55223107337952,
+    "cpu_usage": 153.37,
+    "memory_usage": 624.30078125,
+    "network_traffic": 96546,
+    "mean_score": -0.1673564612865448,
+    "loss": 0.4699096083641052
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750784446.0771334,
+    "latency": 154.41605615615845,
+    "cpu_usage": 154.68999999999997,
+    "memory_usage": 624.5078125,
+    "network_traffic": 95927,
+    "mean_score": -0.11813517659902573,
+    "loss": 0.6580088138580322
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750784787.4259453,
+    "latency": 69.86119055747986,
+    "cpu_usage": 147.55,
+    "memory_usage": 624.41796875,
+    "network_traffic": 95282,
+    "mean_score": -0.10256413370370865,
+    "loss": 0.7010781764984131
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750784929.0558968,
+    "latency": 148.6336362361908,
+    "cpu_usage": 153.12,
+    "memory_usage": 623.8984375,
+    "network_traffic": 94578,
+    "mean_score": -0.072135329246521,
+    "loss": 0.4737580418586731
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750785260.1015196,
+    "latency": 130.15252232551575,
+    "cpu_usage": 156.48000000000002,
+    "memory_usage": 624.13671875,
+    "network_traffic": 93847,
+    "mean_score": -0.11873874068260193,
+    "loss": 0.3441925048828125
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750785452.2225182,
+    "latency": 140.86262464523315,
+    "cpu_usage": 151.00000000000003,
+    "memory_usage": 623.875,
+    "network_traffic": 93507,
+    "mean_score": -0.27921172976493835,
+    "loss": 0.7204780578613281
+  },
+  {
+    "node_id": 17,
+    "timestamp": 1750785740.3794284,
+    "latency": 36.621705293655396,
+    "cpu_usage": 103.06,
+    "memory_usage": 624.0,
+    "network_traffic": 94081,
+    "mean_score": 0.0193346980959177,
+    "loss": 0.6545056104660034
+  }
+]
