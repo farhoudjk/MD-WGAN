@@ -32,7 +32,8 @@ ALPHA = {
 SCEN = list(ALPHA)
 SCEN_LBL = {"balanced": "Balanced", "accuracy": "Accuracy", "delay": "Delay",
             "network": "Network", "resource": "Resource"}
-FIXED = [("MD-GAN", "sota", "md-gan"), ("HVS-GAN", "sota", "hvs-gan"),
+FIXED = [("MD-GAN", "sota", "md-gan"), ("Early-update MD-GAN", "sota", "early-update-mdgan"),
+         ("HVS-GAN", "sota", "hvs-gan"),
          ("FedAvg-GAN", "sota", "fedavg-gan"), ("Proposed (fixed, DQN)", "sota", "ours-dqn"),
          ("Proposed (fixed)", "sota", "ours")]
 TERM_LBL = ["Training (CRPS)", "CPU", "Memory", "Latency", "Traffic"]
@@ -100,7 +101,7 @@ def pick_variant(adapt, nz, s):
 def fig_scenario_cost():
     fixed, adapt, nz = scenario_data()
     labels = [l for l, _, _ in FIXED] + ["Proposed (adaptive)"]
-    cols = [C[1], C[3], MUTED, "#9bb4de", C[0], C[2]]
+    cols = [C[1], "#e8a86b", C[3], MUTED, "#9bb4de", C[0], C[2]]
     nS, nM = len(SCEN), len(labels)
     fig, ax = plt.subplots(figsize=(COL2, 2.5))
     w = 0.8 / nM
@@ -120,7 +121,7 @@ def fig_scenario_cost():
     ax.set_xticks(np.arange(nS)); ax.set_xticklabels([SCEN_LBL[s] + "-weighted" for s in SCEN])
     ax.set_ylabel("Normalised objective cost $J(\\boldsymbol{\\alpha})$")
     ax.grid(axis="x", visible=False)
-    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.22), frameon=False)
+    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(0.5, 1.22), frameon=False)
     save(fig, "fig8_scenario_cost")
 
 
@@ -220,7 +221,7 @@ def fig_trace(scen="network"):
 def fig_breakdown():
     fixed, adapt, nz = scenario_data()
     labels = [l for l, _, _ in FIXED] + ["Proposed (adaptive)"]
-    short = ["MD-GAN", "HVS-GAN", "FedAvg", "Ours (DQN)", "Ours (fixed)", "Ours (adapt.)"]
+    short = ["MD-GAN", "Early-upd.", "HVS-GAN", "FedAvg", "Ours (DQN)", "Ours (fixed)", "Ours (adapt.)"]
     tcols = [C[0], C[1], C[2], C[3], "#7f7f7f"]
     fig, axes = plt.subplots(1, 2, figsize=(COL2, 2.3))
     for ax, s, pl in ((axes[0], "balanced", "(a)"), (axes[1], "network", "(b)")):

@@ -1,0 +1,108 @@
+
+### RMSE   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-all          0.7728   0.0298   5
+sel-greedy       0.7739   0.0299   5
+sel-roundrobin    0.7744   0.0299   5
+sel-dqn          0.7750   0.0296   5
+sel-lazygreedy    0.7776   0.0329   5
+sel-random       0.7776   0.0316   5
+sel-genetic      0.7787   0.0293   5
+sel-residence    0.7793   0.0298   5
+
+### CRPS   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-roundrobin    0.4073   0.0188   5
+sel-dqn          0.4079   0.0214   5
+sel-random       0.4096   0.0181   5
+sel-lazygreedy    0.4099   0.0220   5
+sel-genetic      0.4119   0.0174   5
+sel-residence    0.4120   0.0170   5
+sel-all          0.4137   0.0185   5
+sel-greedy       0.4167   0.0218   5
+
+### minADE   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-roundrobin    1.1902   0.0547   5
+sel-dqn          1.1944   0.0589   5
+sel-lazygreedy    1.1959   0.0581   5
+sel-random       1.1992   0.0487   5
+sel-residence    1.2042   0.0434   5
+sel-greedy       1.2057   0.0549   5
+sel-genetic      1.2060   0.0404   5
+sel-all          1.2074   0.0503   5
+
+### PICP (ideal 0.90)   (closer to 0.90 is better)
+arm                mean       sd   n
+------------------------------------
+sel-greedy       0.2354   0.0207   5
+sel-all          0.2306   0.0157   5
+sel-roundrobin    0.2296   0.0118   5
+sel-dqn          0.2217   0.0275   5
+sel-genetic      0.2210   0.0100   5
+sel-random       0.2196   0.0133   5
+sel-residence    0.2193   0.0156   5
+sel-lazygreedy    0.2143   0.0196   5
+
+### Mode coverage   (higher better)
+arm                mean       sd   n
+------------------------------------
+sel-greedy       0.9162   0.0152   5
+sel-lazygreedy    0.9154   0.0239   5
+sel-genetic      0.9134   0.0203   5
+sel-residence    0.9131   0.0172   5
+sel-dqn          0.9122   0.0164   5
+sel-random       0.9071   0.0209   5
+sel-roundrobin    0.8980   0.0215   5
+sel-all          0.8919   0.0236   5
+
+### Rounds to target   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-all          1.0000   0.0000   5
+sel-dqn          1.0000   0.0000   5
+sel-genetic      1.0000   0.0000   5
+sel-greedy       1.0000   0.0000   5
+sel-lazygreedy    1.0000   0.0000   5
+sel-random       1.0000   0.0000   5
+sel-residence    1.0000   0.0000   5
+sel-roundrobin    1.0000   0.0000   5
+
+### Compute to target   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-dqn         19.4688   0.4819   5
+sel-random      19.6992   0.2576   5
+sel-greedy      19.8144   0.6567   5
+sel-residence   19.8144   0.6567   5
+sel-roundrobin   19.8144   0.6567   5
+sel-lazygreedy   20.3904   0.3155   5
+sel-genetic     20.5056   0.3155   5
+sel-all         32.7168   0.4819   5
+
+### Latency (s)   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-residence    1.6259   0.0237   5
+sel-lazygreedy    1.9131   0.2945   5
+sel-roundrobin    1.9149   0.3203   5
+sel-greedy       1.9185   0.3276   5
+sel-random       1.9228   0.2747   5
+sel-genetic      1.9409   0.3305   5
+sel-dqn          2.1826   0.2812   5
+sel-all          2.8709   0.5347   5
+
+### Traffic (MB)   (lower better)
+arm                mean       sd   n
+------------------------------------
+sel-random      16.9602   0.3670   5
+sel-dqn         17.0942   0.2996   5
+sel-residence   17.0942   0.2996   5
+sel-genetic     17.2282   0.0000   5
+sel-greedy      17.2282   0.0000   5
+sel-lazygreedy   17.2282   0.0000   5
+sel-roundrobin   17.2282   0.0000   5
+sel-all         28.7137   0.0000   5

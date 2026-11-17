@@ -105,6 +105,36 @@ def _shuffle_partitions(datasets, seed=0):
     return out
 
 
+
+def load_cell_data(cfg, node_ids, gid=0):
+    """Datasets for one RSU's discriminator pool, under cfg.noniid.
+
+    Shared by the proposed framework and every baseline, so all methods train
+    and evaluate on identical shards.  For segment/lane/iid-split the NGSIM
+    source is partitioned directly with one global scaler, so cross-node
+    heterogeneity survives normalisation; the shipped per-node CSVs are random
+    splits scaled per node, which makes every shard N(0,1).
+    """
+    if cfg.noniid in ("segment", "lane", "iid-split"):
+        scheme = "random" if cfg.noniid == "iid-split" else cfg.noniid
+        parts = build_spatial_partitions(
+            cfg.source_csv, n_nodes=cfg.n_generators * cfg.disc_per_gen,
+            window=cfg.window, test_frac=cfg.test_frac, seed=cfg.seed,
+            max_tracks=cfg.max_tracks, scheme=scheme)
+        data = [parts[(nid - 1) % len(parts)] for nid in node_ids]
+    else:
+        data = []
+        for nid in node_ids:
+            path = os.path.join(cfg.data_root, f"discriminator_{nid}", "data.csv")
+            data.append(build_node_dataset_cached(
+                path, window=cfg.window, test_frac=cfg.test_frac,
+                seed=cfg.seed, max_tracks=cfg.max_tracks))
+    if cfg.noniid == "shuffled":
+        # Pool the cell's windows and redeal them uniformly: an IID view.
+        data = _shuffle_partitions(data, seed=cfg.seed + gid)
+    return data
+
+
 class GeneratorCell:
     """One RSU: a generator, its discriminator pool, and its local controller."""
 
@@ -114,30 +144,7 @@ class GeneratorCell:
         self.device = device
         self.node_ids = node_ids
 
-        self.data = []
-        if cfg.noniid in ("segment", "lane", "iid-split"):
-            # Partition the NGSIM source directly, with one global scaler, so
-            # cross-node heterogeneity survives normalisation.  The shipped
-            # per-node CSVs are random splits scaled per node, which makes every
-            # shard N(0,1) and every subset equivalent.
-            scheme = "random" if cfg.noniid == "iid-split" else cfg.noniid
-            parts = build_spatial_partitions(
-                cfg.source_csv, n_nodes=cfg.n_generators * cfg.disc_per_gen,
-                window=cfg.window, test_frac=cfg.test_frac, seed=cfg.seed,
-                max_tracks=cfg.max_tracks, scheme=scheme)
-            self.data = [parts[(nid - 1) % len(parts)] for nid in node_ids]
-        else:
-            for nid in node_ids:
-                path = os.path.join(cfg.data_root, f"discriminator_{nid}", "data.csv")
-                self.data.append(build_node_dataset_cached(
-                    path, window=cfg.window, test_frac=cfg.test_frac,
-                    seed=cfg.seed, max_tracks=cfg.max_tracks))
-        if cfg.noniid == "shuffled":
-            # Destroy the spatial partitioning by pooling all of this cell's
-            # windows and redealing them uniformly, giving every discriminator
-            # an IID view.  Contrasting with "natural" measures how much of the
-            # framework's benefit comes from coping with heterogeneity.
-            self.data = _shuffle_partitions(self.data, seed=cfg.seed + gid)
+        self.data = load_cell_data(cfg, node_ids, gid)
 
         nf = self.data[0]["n_features"]
         self.n_features = nf

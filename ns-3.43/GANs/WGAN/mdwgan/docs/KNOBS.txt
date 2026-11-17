@@ -1,0 +1,22 @@
+
+### network-weighted   (Eq. 8 cost, lower better)
+knob enabled       cost   vs none       p
+-----------------------------------------
+none             0.7708        --      --
+top_k            0.1980     74.3%   0.062
+E_G              0.3099     59.8%   0.062
+sync_every       0.3513     54.4%   0.062
+lambda_sup       0.4229     45.1%   0.062
+all              0.1672     78.3%   0.062
+
+### resource-weighted   (Eq. 8 cost, lower better)
+knob enabled       cost   vs none       p
+-----------------------------------------
+none             0.7144        --      --
+top_k            0.2626     63.2%   0.062
+E_G              0.5033     29.6%   0.062
+sync_every       0.5840     18.2%   0.062
+lambda_sup       0.5269     26.2%   0.062
+all              0.3381     52.7%   0.062
+
+n=5 seeds; 0.062 is the smallest attainable p at n=5.

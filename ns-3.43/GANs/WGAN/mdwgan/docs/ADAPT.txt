@@ -1,0 +1,12 @@
+scenario       none   static   online      best   gain%       p
+---------------------------------------------------------------
+balanced     0.6696   0.2491   0.4776    static   62.8%   0.062
+accuracy     0.7479   0.4174   0.3504    online   53.1%   0.062
+delay        0.7843   0.2468   0.3206    static   68.5%   0.062
+network      0.8508   0.1885   0.3027    static   77.8%   0.062
+resource     0.8293   0.2985   0.6011    static   64.0%   0.062
+
+Adaptive beats fixed in 5/5 scenarios.
+Each row scored under its OWN alpha. * = p<0.05 (paired Wilcoxon, n=5;
+note 0.062 is the smallest attainable p at n=5, so absence of * at
+n=5 is weak evidence of no effect, not evidence of no effect.

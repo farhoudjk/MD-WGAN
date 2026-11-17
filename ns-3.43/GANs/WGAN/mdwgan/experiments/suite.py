@@ -172,6 +172,7 @@ def sota(base):
         _c(base, "hvs-gan", method="hvs-gan"),
         _c(base, "fedavg-gan", method="fedavg-gan"),
         _c(base, "md-gan", method="md-gan"),
+        _c(base, "early-update-mdgan", method="early-update-mdgan"),
     ]
 
 

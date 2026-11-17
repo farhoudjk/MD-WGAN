@@ -31,6 +31,7 @@ ALPHA = {
 # configuration the framework would actually deploy for it.
 FIXED = [
     ("MD-GAN",        "sota", "md-gan"),
+    ("Early-upd MDGAN","sota", "early-update-mdgan"),
     ("HVS-GAN",       "sota", "hvs-gan"),
     ("FedAvg-GAN",    "sota", "fedavg-gan"),
     ("Ours (DQN)",    "sota", "ours-dqn"),

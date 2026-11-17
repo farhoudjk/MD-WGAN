@@ -1,0 +1,81 @@
+
+### RMSE   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-segment    0.7750   0.0296   5
+noniid-lane      0.7940   0.0154   5
+noniid-iid-split    0.8064   0.0251   5
+noniid-shuffled    0.8322   0.0300   5
+noniid-natural    0.8325   0.0299   5
+
+### CRPS   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-natural    0.3957   0.0088   5
+noniid-shuffled    0.3968   0.0091   5
+noniid-segment    0.4079   0.0214   5
+noniid-lane      0.4164   0.0165   5
+noniid-iid-split    0.4293   0.0184   5
+
+### minADE   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-segment    1.1944   0.0589   5
+noniid-lane      1.2176   0.0483   5
+noniid-natural    1.2265   0.0234   5
+noniid-shuffled    1.2286   0.0261   5
+noniid-iid-split    1.2461   0.0564   5
+
+### PICP (ideal 0.90)   (closer to 0.90 is better)
+arm                mean       sd   n
+------------------------------------
+noniid-shuffled    0.2853   0.0106   5
+noniid-natural    0.2812   0.0188   5
+noniid-lane      0.2513   0.0478   5
+noniid-iid-split    0.2421   0.0151   5
+noniid-segment    0.2217   0.0275   5
+
+### Mode coverage   (higher better)
+arm                mean       sd   n
+------------------------------------
+noniid-natural    0.9295   0.0090   5
+noniid-lane      0.9288   0.0086   5
+noniid-shuffled    0.9273   0.0166   5
+noniid-segment    0.9122   0.0164   5
+noniid-iid-split    0.9031   0.0078   5
+
+### Rounds to target   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-lane      1.0000   0.0000   5
+noniid-segment    1.0000   0.0000   5
+noniid-iid-split    4.6000   7.5033   5
+noniid-shuffled    8.4000  10.2859   5
+noniid-natural    8.6000  10.6207   5
+
+### Compute to target   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-lane      9.6768   0.4819   5
+noniid-segment   19.4688   0.4819   5
+noniid-iid-split  132.0832 240.7125   5
+noniid-shuffled  255.6928 328.3870   5
+noniid-natural  261.4528 338.5505   5
+
+### Latency (s)   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-lane      1.0329   0.0142   5
+noniid-shuffled    1.8739   0.1956   5
+noniid-iid-split    2.0123   0.1758   5
+noniid-natural    2.1089   0.1777   5
+noniid-segment    2.1495   0.3039   5
+
+### Traffic (MB)   (lower better)
+arm                mean       sd   n
+------------------------------------
+noniid-lane      9.1884   0.0000   5
+noniid-iid-split   17.0942   0.2996   5
+noniid-natural   17.0942   0.2996   5
+noniid-segment   17.0942   0.2996   5
+noniid-shuffled   17.0942   0.2996   5

@@ -1,0 +1,21 @@
+Eq. (8) cost, lower is better. Each column uses that scenario's alpha.
+
+method             balanced   accuracy      delay    network   resource
+-----------------------------------------------------------------------
+MD-GAN               0.5641     0.4528     0.5529     0.5599     0.6402
+Early-upd MDGAN      0.3864     0.3834     0.4023     0.2912     0.4358
+HVS-GAN              0.4251     0.4376     0.3703     0.4941     0.4090
+FedAvg-GAN           0.3965     0.4171     0.3390     0.4608     0.3801
+Ours (DQN)           0.6497     0.6312     0.6777     0.7353     0.5925
+Ours (fixed)         0.6579     0.6007     0.7222     0.7434     0.6022
+Ours (adaptive)      0.1765     0.2724     0.1884     0.1230     0.1623
+  (variant)          static     online     static     static     static
+
+Per-scenario winner, and significance of adaptive vs the best fixed method:
+  balanced   winner=Ours (adaptive)    vs Early-upd MDGAN: 0.1765 vs 0.3864, p=0.062
+  accuracy   winner=Ours (adaptive)    vs Early-upd MDGAN: 0.2724 vs 0.3834, p=0.125
+  delay      winner=Ours (adaptive)    vs FedAvg-GAN: 0.1884 vs 0.3390, p=0.062
+  network    winner=Ours (adaptive)    vs Early-upd MDGAN: 0.1230 vs 0.2912, p=0.062
+  resource   winner=Ours (adaptive)    vs FedAvg-GAN: 0.1623 vs 0.3801, p=0.062
+
+n=5 seeds; p=0.062 is the smallest attainable value at n=5.

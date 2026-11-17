@@ -1,0 +1,10 @@
+arm            RANK      rmse      crps   min_ade      picpmode_coverage      conv      work   latency   traffic
+----------------------------------------------------------------------------------------------------------------
+ours           1.67    0.7755     0.396     1.075     0.721     0.923         1     19.81     2.161     17.23
+md-gan         1.78    0.8357    0.3707     1.131    0.4696    0.9409      15.6     549.1     1.555     9.571
+fedavg-gan     2.11     0.897       0.4     1.303    0.4039    0.9905     1.333     331.9     1.016     11.37
+hvs-gan        2.22    0.8967    0.3997     1.302    0.4032    0.9905     1.333     333.2     1.077     12.17
+ours-dqn       2.22     0.775    0.4079     1.194    0.2217    0.9122         1     19.47     1.926     17.09
+
+n seeds: 5. RANK = mean rank over all 9 metrics (lower better).
+PICP ranked by distance from nominal 0.90, not by magnitude.

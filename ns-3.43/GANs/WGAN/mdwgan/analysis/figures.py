@@ -23,6 +23,7 @@ TH = 0.86
 
 LBL = {
     "ours": "Proposed", "ours-dqn": "Proposed (DQN)", "md-gan": "MD-GAN",
+    "early-update-mdgan": "Early-update MD-GAN",
     "hvs-gan": "HVS-GAN", "fedavg-gan": "FedAvg-GAN", "full": "Full",
     "no-rl": "w/o RL selection", "no-game": "w/o game coordination",
     "no-ensemble": "w/o ensemble", "none": "All components removed",
@@ -70,21 +71,21 @@ def save(fig, name):
 # --- Fig 1: convergence vs baselines ---------------------------------------
 def fig_convergence():
     d = load("sota")
-    arms = [a for a in ("ours", "ours-dqn", "md-gan", "hvs-gan") if a in d]
+    arms = [a for a in ("ours", "ours-dqn", "md-gan", "early-update-mdgan", "hvs-gan") if a in d]
     fig, axes = plt.subplots(1, 2, figsize=(COL2, 2.35))
     for ax, key, ylab, pl in ((axes[0], "rmse", "RMSE", "(a)"),
                               (axes[1], "crps", "CRPS", "(b)")):
         for i, a in enumerate(arms):
             x, mu, ci = curve(d[a], key)
-            ax.plot(x, mu, color=C[i], marker=MARKERS[i],
+            ax.plot(x, mu, color=(C + ["#7f7f7f"])[i], marker=MARKERS[i],
                     markevery=(i * 2, 10), label=LBL.get(a, a))
-            ax.fill_between(x, mu - ci, mu + ci, color=C[i], alpha=0.13, lw=0)
+            ax.fill_between(x, mu - ci, mu + ci, color=(C + ["#7f7f7f"])[i], alpha=0.13, lw=0)
         ax.set_xlabel("Training round")
         ax.set_ylabel(ylab)
         ax.set_xlim(0, 61)
         panel_label(ax, pl, dy=-0.21)
     h, l = axes[0].get_legend_handles_labels()
-    fig.legend(h, l, loc="upper center", ncol=4, bbox_to_anchor=(0.5, 1.07))
+    fig.legend(h, l, loc="upper center", ncol=5, bbox_to_anchor=(0.5, 1.07))
     fig.subplots_adjust(wspace=0.28)
     save(fig, "fig1_convergence")
 
@@ -92,7 +93,7 @@ def fig_convergence():
 # --- Fig 2: cost of reaching a target --------------------------------------
 def fig_cost():
     d = load("sota")
-    arms = [a for a in ("ours", "ours-dqn", "md-gan", "hvs-gan", "fedavg-gan") if a in d]
+    arms = [a for a in ("ours", "ours-dqn", "md-gan", "early-update-mdgan", "hvs-gan", "fedavg-gan") if a in d]
     names, rr, ww, frac = [], [], [], []
     for a in arms:
         c, w = conv(d[a])
@@ -213,6 +214,7 @@ def fig_pareto():
     ax.step(fx, fy, where="post", color=C[2], lw=1.0, zorder=3,
             label="Pareto frontier")
     hi = [("ours", C[0], "Proposed", (7, -2)),
+          ("early-update-mdgan", C[2], "Early-update MD-GAN", (-6, -8)),
           ("ours-dqn", C[3], "Proposed (DQN)", (7, 3)),
           ("md-gan", C[1], "MD-GAN", (-6, 6))]
     for a, col, lab, off in hi:

@@ -413,4 +413,104 @@ class MDGAN:
     evaluate = HVSGAN.evaluate
 
 
-BASELINES = {"hvs-gan": HVSGAN, "fedavg-gan": FedAvgGAN, "md-gan": MDGAN}
+# ---------------------------------------------------------------------------
+# Early-update MD-GAN (Jafari Kaleibar & Litoiu, MASCOTS 2025): the authors'
+# earlier multi-discriminator design, ported from scratch/dsrc-simulations4.cc
+# into the common protocol.  Every discriminator trains every round at fixed
+# epochs, but a node *transmits* only when its loss improves on its own best so
+# far: a critic sends feedback only if its loss improved, and the generator
+# trains on whatever feedback arrived (asynchronous, minimum one report) and
+# broadcasts new samples only if its own loss improved.  No discriminator swap
+# and no selection, learning or coordination -- fixed training parameters.
+# ---------------------------------------------------------------------------
+
+class EarlyUpdateMDGAN(MDGAN):
+    name = "early-update-mdgan"
+
+    def __init__(self, cfg, node_ids, device, min_feedback=1):
+        super().__init__(cfg, node_ids, device)
+        self.min_feedback = min_feedback
+        self.best_d = [float("inf")] * self.K
+        self.best_g = float("inf")
+
+    def run_round(self, rnd, net_model, metrics_norm):
+        cfg = self.cfg
+        t0 = time.time()
+        d_steps = g_steps = 0
+        losses, improved = [], []
+        for j in range(self.K):
+            loss = None
+            for _ in range(cfg.fixed_E_D):
+                ctx, real_y = self._batch(j)
+                if ctx is None:
+                    break
+                with torch.no_grad():
+                    fake_y = self.gen(ctx)
+                gp = gradient_penalty(self.discs[j], ctx, real_y, fake_y)
+                loss = -(self.discs[j](ctx, real_y).mean()
+                         - self.discs[j](ctx, fake_y).mean()) + cfg.lambda_gp * gp
+                self.dopts[j].zero_grad(); loss.backward()
+                torch.nn.utils.clip_grad_norm_(self.discs[j].parameters(), 1.0)
+                self.dopts[j].step(); d_steps += 1
+            if loss is None:
+                continue
+            lv = float(loss.item())
+            losses.append(lv)
+            # Early update: transmit only if this critic beat its own best.
+            if lv < self.best_d[j]:
+                self.best_d[j] = lv
+                improved.append(j)
+
+        g_loss = None
+        if len(improved) >= self.min_feedback:
+            for _ in range(cfg.fixed_E_G):
+                self.gopt.zero_grad()
+                total = 0.0
+                for j in improved:
+                    ctx, real_y = self._batch(j)
+                    if ctx is None:
+                        continue
+                    fake_y = self.gen(ctx)
+                    t = -self.discs[j](ctx, fake_y).mean() / len(improved)
+                    if cfg.lambda_sup > 0:
+                        t = t + cfg.lambda_sup * torch.nn.functional.smooth_l1_loss(
+                            fake_y, real_y) / len(improved)
+                    total = total + t
+                if not torch.is_tensor(total):
+                    break
+                total.backward()
+                torch.nn.utils.clip_grad_norm_(self.gen.parameters(), 1.0)
+                self.gopt.step(); g_steps += 1
+                g_loss = float(total.item())
+        g_improved = g_loss is not None and g_loss < self.best_g
+        if g_improved:
+            self.best_g = g_loss
+
+        # Traffic: uplink feedback from improved critics only; downlink sample
+        # broadcast to every critic only when the generator improved.
+        payload = net_model.payload_bytes(self.gen, cfg)
+        uplinks = improved
+        work = (d_steps + g_steps * max(len(improved), 1)) * cfg.batch_size / 1000.0
+        net = net_model.round_cost(
+            gid=0, subset=uplinks, rnd=rnd, payload_bytes=payload,
+            E_D=cfg.fixed_E_D, E_G=cfg.fixed_E_G,
+            compute_seconds=time.time() - t0,
+            work_units=work, sync_steps=max(g_steps, 1))
+        sync = max(g_steps, 1)
+        # round_cost counted one down + one up per uplink critic; correct it to
+        # (uplinks) up + (K if generator improved else 0) down.
+        down = (self.K if g_improved else 0)
+        net["network_traffic"] = float(payload * net_model.p.protocol_overhead
+                                       * sync * (len(uplinks) + down))
+        rec = {"round": rnd, "generator": 0, "subset": list(range(self.K)),
+               "E_D": cfg.fixed_E_D, "E_G": cfg.fixed_E_G,
+               "wasserstein": float(np.mean(losses)) if losses else 0.0,
+               "reward": 0.0, "d_steps": d_steps, "g_steps": g_steps,
+               "n_active": len(improved), "n_uplink": len(uplinks),
+               "g_broadcast": int(g_improved), **net}
+        self.history.append(rec)
+        return rec
+
+
+BASELINES = {"hvs-gan": HVSGAN, "fedavg-gan": FedAvgGAN, "md-gan": MDGAN,
+             "early-update-mdgan": EarlyUpdateMDGAN}
