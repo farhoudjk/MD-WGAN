@@ -1,0 +1,37 @@
+% Generated from mdwgan/docs/TABLE_sota.txt (5 seeds, segment partitions).
+\begin{table*}[!t]
+\centering
+\caption{Predictive quality on held-out NGSIM continuations and per-round cost.
+Mean\,$\pm$\,s.d. over five seeds. PICP is best at its nominal $0.90$; all other
+metrics are better when lower.}
+\label{tab:metrics}
+\begin{tabular}{lccccc}
+\toprule
+Method & RMSE $\downarrow$ & CRPS $\downarrow$ & minADE $\downarrow$
+       & PICP $\rightarrow 0.90$ & Traffic (MB) $\downarrow$ \\
+\midrule
+MD-GAN~\cite{hardy2019mdgan}
+  & 0.836\,$\pm$\,0.032 & \textbf{0.371\,$\pm$\,0.008} & 1.131\,$\pm$\,0.024
+  & 0.470\,$\pm$\,0.024 & \textbf{9.57\,$\pm$\,0.00} \\
+HVS-GAN~\cite{wu2024hvsgan}
+  & 0.897\,$\pm$\,0.035 & 0.400\,$\pm$\,0.010 & 1.302\,$\pm$\,0.040
+  & 0.403\,$\pm$\,0.046 & 12.17\,$\pm$\,1.57 \\
+FedAvg-GAN
+  & 0.897\,$\pm$\,0.035 & 0.400\,$\pm$\,0.011 & 1.303\,$\pm$\,0.041
+  & 0.404\,$\pm$\,0.026 & 11.37\,$\pm$\,1.55 \\
+Proposed (fixed, DQN selection)
+  & \textbf{0.775\,$\pm$\,0.030} & 0.408\,$\pm$\,0.021 & 1.194\,$\pm$\,0.059
+  & 0.222\,$\pm$\,0.028 & 17.09\,$\pm$\,0.30 \\
+Proposed (fixed configuration)
+  & 0.776\,$\pm$\,0.029 & 0.396\,$\pm$\,0.017 & \textbf{1.075\,$\pm$\,0.042}
+  & \textbf{0.721\,$\pm$\,0.011} & 17.23\,$\pm$\,0.00 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}\footnotesize
+No single method dominates: MD-GAN attains the best terminal CRPS and the lowest
+traffic, while the proposed configuration attains the best point error,
+multi-modal error and calibration. This is the trade-off that motivates the
+objective-adaptive controller of Section~\ref{sec:adaptive}; the corresponding
+Eq.~(\ref{eq:obj}) costs are reported in Table~\ref{tab:scenario}.
+\end{flushleft}
+\end{table*}

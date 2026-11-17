@@ -1,0 +1,16 @@
+\begin{table*}[!t]
+\centering
+\caption{Comparison with federated GAN baselines on NGSIM. Mean\,$\pm$\,s.d. over five seeds. Arrows give the preferred direction; PICP is best near its nominal 0.90. ``Rounds'' and ``Compute'' are the cost of first reaching RMSE\,$\leq$\,0.86, with the fraction of seeds that reach it at all.}
+\label{tab:sota}
+\begin{tabular}{lcccccc}
+\toprule
+Method & RMSE $\downarrow$ & CRPS $\downarrow$ & minADE $\downarrow$ & PICP $\rightarrow$0.90 & Rounds $\downarrow$ & Compute $\downarrow$ \\
+\midrule
+\textbf{Proposed} & 0.776\,$\pm$\,0.029 & 0.396\,$\pm$\,0.017 & 1.075\,$\pm$\,0.042 & 0.721\,$\pm$\,0.011 & 6.4 & 187 \\
+Proposed (DQN variant) & 0.775\,$\pm$\,0.030 & 0.408\,$\pm$\,0.021 & 1.194\,$\pm$\,0.059 & 0.222\,$\pm$\,0.028 & 7.0 & 208 \\
+MD-GAN \cite{hardy2019mdgan} & 0.836\,$\pm$\,0.032 & 0.371\,$\pm$\,0.008 & 1.131\,$\pm$\,0.024 & 0.470\,$\pm$\,0.024 & 36.0 (4/5) & 1267 \\
+HVS-GAN \cite{wu2024hvsgan} & 0.897\,$\pm$\,0.035 & 0.400\,$\pm$\,0.010 & 1.302\,$\pm$\,0.040 & 0.403\,$\pm$\,0.046 & -- (0/5) & -- \\
+FedAvg-GAN & 0.897\,$\pm$\,0.035 & 0.400\,$\pm$\,0.011 & 1.303\,$\pm$\,0.041 & 0.404\,$\pm$\,0.026 & -- (0/5) & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

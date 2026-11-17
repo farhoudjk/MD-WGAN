@@ -1,0 +1,20 @@
+\begin{table*}[!t]
+\centering
+\caption{Component ablation. Mean\,$\pm$\,s.d. over five seeds. Significance is a paired Wilcoxon signed-rank test of CRPS against the full framework, Holm-corrected across variants ($^{\ast}p<0.05$, $^{\ast\ast}p<0.01$, $^{\ast\ast\ast}p<0.001$). Compute is gradient-step units spent reaching RMSE\,$\leq$\,0.86.}
+\label{tab:ablation}
+\begin{tabular}{lccccc}
+\toprule
+Variant & RMSE $\downarrow$ & CRPS $\downarrow$ & minADE $\downarrow$ & PICP $\rightarrow$0.90 & Compute $\downarrow$ \\
+\midrule
+\textbf{Full framework} & 0.775\,$\pm$\,0.030 & 0.408\,$\pm$\,0.021 & 1.194\,$\pm$\,0.059 & 0.222\,$\pm$\,0.028 & 208 \\
+w/o RL-based selection & 0.778\,$\pm$\,0.032 & 0.410\,$\pm$\,0.018 & 1.199\,$\pm$\,0.049 & 0.220\,$\pm$\,0.013 & 196 \\
+w/o ensemble feedback & 0.780\,$\pm$\,0.026 & 0.413\,$\pm$\,0.015 & 1.200\,$\pm$\,0.038 & 0.227\,$\pm$\,0.014 & 253 \\
+w/o game coordination & 0.802\,$\pm$\,0.033 & 0.384\,$\pm$\,0.020 & 1.149\,$\pm$\,0.056 & 0.336\,$\pm$\,0.037 & 334 \\
+w/o online adaptation (static game) & 0.776\,$\pm$\,0.030 & 0.395\,$\pm$\,0.021 & 1.158\,$\pm$\,0.054 & 0.238\,$\pm$\,0.034 & 210 \\
+w/o supervised term & 0.795\,$\pm$\,0.032 & 0.393\,$\pm$\,0.023 & 1.085\,$\pm$\,0.052 & 0.684\,$\pm$\,0.020 & 519 \\
+w/o adversarial term & 0.764\,$\pm$\,0.029 & 0.413\,$\pm$\,0.018 & 1.192\,$\pm$\,0.051 & 0.166\,$\pm$\,0.016 & 155 \\
+w/o context conditioning & 1.000\,$\pm$\,0.022 & 0.720\,$\pm$\,0.021 & 1.949\,$\pm$\,0.045 & 0.137\,$\pm$\,0.024 & -- \\
+all components removed & 0.820\,$\pm$\,0.031 & 0.390\,$\pm$\,0.019 & 1.175\,$\pm$\,0.051 & 0.352\,$\pm$\,0.047 & 184 \\
+\bottomrule
+\end{tabular}
+\end{table*}

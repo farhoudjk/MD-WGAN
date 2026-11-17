@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\caption{Component ablation of the MD-WGAN framework on NGSIM.}
+\label{tab:ablation}
+\begin{tabular}{lcccccc}
+\toprule
+Variant & RMSE & MAE & Mode cov. & CPU (\%) & Latency (s) & Traffic (MB) \\
+\midrule
+\textbf{MD-WGAN (full)} & 0.836\,$\pm$\,0.031 & 0.420\,$\pm$\,0.007 & 0.929\,$\pm$\,0.008 & 17.3\,$\pm$\,0.0 & 2.13\,$\pm$\,0.05 & 17.23\,$\pm$\,0.00 \\
+w/o RL selection & 0.834\,$\pm$\,0.031 & 0.420\,$\pm$\,0.008 & 0.922\,$\pm$\,0.010 & 17.3\,$\pm$\,0.0 & 2.09\,$\pm$\,0.08 & 17.23\,$\pm$\,0.00 \\
+w/o game coordination & 0.847\,$\pm$\,0.032 & 0.400\,$\pm$\,0.008 & 0.945\,$\pm$\,0.006 & 10.6\,$\pm$\,0.0 & 1.22\,$\pm$\,0.09 & 5.74\,$\pm$\,0.00 \\
+w/o ensemble feedback & 0.841\,$\pm$\,0.033 & 0.419\,$\pm$\,0.010 & 0.930\,$\pm$\,0.007 & 15.4\,$\pm$\,0.0 & 2.02\,$\pm$\,0.09 & 17.23\,$\pm$\,0.00 \\
+w/o RL + game & 0.848\,$\pm$\,0.031 & 0.401\,$\pm$\,0.007 & 0.944\,$\pm$\,0.004 & 10.6\,$\pm$\,0.0 & 1.11\,$\pm$\,0.04 & 5.74\,$\pm$\,0.00 \\
+w/o RL + ensemble & 0.842\,$\pm$\,0.032 & 0.426\,$\pm$\,0.011 & 0.932\,$\pm$\,0.008 & 15.4\,$\pm$\,0.0 & 1.89\,$\pm$\,0.06 & 17.23\,$\pm$\,0.00 \\
+w/o game + ensemble & 0.881\,$\pm$\,0.033 & 0.423\,$\pm$\,0.012 & 0.971\,$\pm$\,0.009 & 9.9\,$\pm$\,0.0 & 1.05\,$\pm$\,0.03 & 5.74\,$\pm$\,0.00 \\
+none (plain fed. WGAN) & 0.885\,$\pm$\,0.030 & 0.430\,$\pm$\,0.005 & 0.973\,$\pm$\,0.006 & 9.9\,$\pm$\,0.0 & 1.13\,$\pm$\,0.07 & 5.74\,$\pm$\,0.00 \\
+static (non-adaptive) game & 0.837\,$\pm$\,0.032 & 0.406\,$\pm$\,0.009 & 0.935\,$\pm$\,0.008 & 10.4\,$\pm$\,0.0 & 1.22\,$\pm$\,0.06 & 10.34\,$\pm$\,0.00 \\
+unconditional $G(z)$ & 1.003\,$\pm$\,0.018 & 0.677\,$\pm$\,0.005 & 0.215\,$\pm$\,0.010 & 17.3\,$\pm$\,0.0 & 2.02\,$\pm$\,0.07 & 17.23\,$\pm$\,0.00 \\
+pure adversarial & 0.857\,$\pm$\,0.033 & 0.449\,$\pm$\,0.009 & 0.960\,$\pm$\,0.011 & 17.3\,$\pm$\,0.0 & 1.95\,$\pm$\,0.04 & 17.23\,$\pm$\,0.00 \\
+supervised only & 0.818\,$\pm$\,0.031 & 0.404\,$\pm$\,0.008 & 0.909\,$\pm$\,0.008 & 17.3\,$\pm$\,0.0 & 1.90\,$\pm$\,0.08 & 17.23\,$\pm$\,0.00 \\
+performance-weighted ens. & 0.836\,$\pm$\,0.031 & 0.420\,$\pm$\,0.006 & 0.925\,$\pm$\,0.009 & 17.3\,$\pm$\,0.0 & 1.72\,$\pm$\,0.08 & 17.23\,$\pm$\,0.00 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}\footnotesize
+Mean\,$\pm$\,s.d. over 5 seeds. Significance is a paired Wilcoxon signed-rank test against the full framework, Holm-corrected across variants: $^{*}p<0.05$, $^{**}p<0.01$, $^{***}p<0.001$.
+\end{flushleft}
+\end{table*}

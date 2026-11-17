@@ -1,0 +1,16 @@
+\begin{table}[!t]
+\centering
+\caption{Discriminator-selection strategies under an otherwise identical framework. Mean\,$\pm$\,s.d. over five seeds.}
+\label{tab:selection}
+\begin{tabular}{lccc}
+\toprule
+Strategy & RMSE $\downarrow$ & CRPS $\downarrow$ & Compute $\downarrow$ \\
+\midrule
+DQN (deep RL) & 0.775\,$\pm$\,0.030 & 0.408\,$\pm$\,0.021 & 208 \\
+\textbf{Greedy-by-loss} & 0.774\,$\pm$\,0.030 & 0.417\,$\pm$\,0.022 & 188 \\
+Random-$k$ & 0.778\,$\pm$\,0.032 & 0.410\,$\pm$\,0.018 & 196 \\
+Round-robin & 0.774\,$\pm$\,0.030 & 0.407\,$\pm$\,0.019 & 188 \\
+All discriminators & 0.773\,$\pm$\,0.030 & 0.414\,$\pm$\,0.018 & 247 \\
+\bottomrule
+\end{tabular}
+\end{table}

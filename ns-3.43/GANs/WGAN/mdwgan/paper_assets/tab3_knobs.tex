@@ -1,0 +1,26 @@
+% Generated from mdwgan/docs/KNOBS.txt (5 seeds).
+\begin{table}[!t]
+\centering
+\caption{Controller ablation: Eq.~(\ref{eq:obj}) cost with a single knob
+enabled and the remainder held at their defaults. Active subset size alone
+recovers most of the available benefit.}
+\label{tab:knobs}
+\begin{tabular}{lcc}
+\toprule
+Knob enabled & Network-wtd. & Resource-wtd. \\
+\midrule
+None (fixed configuration)            & 0.771 & 0.714 \\
+Active subset size $k$                & \textbf{0.198} & \textbf{0.263} \\
+Generator epochs $E_G$                & 0.310 & 0.503 \\
+Synchronisation interval              & 0.351 & 0.584 \\
+Supervision weight $\lambda_{\rm sup}$ & 0.423 & 0.527 \\
+All four jointly                      & 0.167 & 0.338 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}\footnotesize
+Under the resource weighting, tuning $k$ alone (0.263) outperforms tuning all
+four knobs jointly (0.338): the linear direction model does not account for
+interaction between knobs, and over-corrects when several move together. We
+report this rather than tuning it away.
+\end{flushleft}
+\end{table}

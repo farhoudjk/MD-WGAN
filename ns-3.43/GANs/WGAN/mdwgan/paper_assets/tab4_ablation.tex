@@ -1,0 +1,31 @@
+% Generated from mdwgan/docs/TABLE_ablation.txt (5 seeds, segment partitions).
+\begin{table}[!t]
+\centering
+\caption{Component ablation of the training framework (five seeds). Only
+context conditioning produces an effect large relative to seed variance; the
+coordination mechanisms do not.}
+\label{tab:ablation}
+\begin{tabular}{lcc}
+\toprule
+Variant & RMSE $\downarrow$ & CRPS $\downarrow$ \\
+\midrule
+\textbf{Full framework}        & 0.775\,$\pm$\,0.030 & 0.408\,$\pm$\,0.021 \\
+w/o RL-based selection         & 0.778\,$\pm$\,0.032 & 0.410\,$\pm$\,0.018 \\
+w/o ensemble feedback          & 0.780\,$\pm$\,0.026 & 0.413\,$\pm$\,0.015 \\
+w/o online epoch adaptation    & 0.776\,$\pm$\,0.030 & 0.395\,$\pm$\,0.021 \\
+w/o game coordination          & 0.802\,$\pm$\,0.033 & 0.384\,$\pm$\,0.020 \\
+w/o supervised term            & 0.795\,$\pm$\,0.032 & 0.393\,$\pm$\,0.023 \\
+w/o adversarial term           & 0.764\,$\pm$\,0.029 & 0.413\,$\pm$\,0.018 \\
+All coordination removed       & 0.820\,$\pm$\,0.031 & 0.390\,$\pm$\,0.020 \\
+\midrule
+w/o context conditioning       & 1.000\,$\pm$\,0.022 & 0.712\,$\pm$\,0.019 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}\footnotesize
+Seed standard deviation is $\approx 0.030$ RMSE, so every row above the rule is
+within one standard deviation of the full framework: none of the coordination
+components is individually distinguishable at $n=5$. Removing context
+conditioning costs $0.225$ RMSE, roughly seven standard deviations and an order
+of magnitude larger than any other component.
+\end{flushleft}
+\end{table}

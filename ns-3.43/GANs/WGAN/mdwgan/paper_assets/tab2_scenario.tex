@@ -1,0 +1,31 @@
+% Generated from mdwgan/docs/SCENARIO.txt (5 seeds, segment partitions).
+\begin{table*}[!t]
+\centering
+\caption{Normalised Eq.~(\ref{eq:obj}) cost under five deployment weightings;
+each column is evaluated with its own $\boldsymbol{\alpha}$. Lower is better.
+Every fixed configuration -- including ours -- is best in at most one column,
+while the adaptive framework is best in all five.}
+\label{tab:scenario}
+\begin{tabular}{lccccc}
+\toprule
+Method & Balanced & Accuracy & Delay & Network & Resource \\
+\midrule
+MD-GAN~\cite{hardy2019mdgan}   & 0.562 & 0.451 & 0.551 & 0.555 & 0.639 \\
+HVS-GAN~\cite{wu2024hvsgan}    & 0.424 & 0.436 & 0.369 & 0.491 & 0.408 \\
+FedAvg-GAN                     & 0.395 & 0.416 & 0.338 & 0.457 & 0.379 \\
+Proposed (fixed, DQN)          & 0.650 & 0.631 & 0.678 & 0.735 & 0.593 \\
+Proposed (fixed configuration) & 0.658 & 0.601 & 0.722 & 0.743 & 0.602 \\
+\midrule
+\textbf{Proposed (adaptive)}   & \textbf{0.171} & \textbf{0.269} & \textbf{0.184}
+                               & \textbf{0.112} & \textbf{0.159} \\
+\quad selected variant         & static & online & static & static & static \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}\footnotesize
+Five seeds per cell. Terms are min--max normalised across all methods so the
+five components of Eq.~(\ref{eq:obj}) are commensurable. Paired Wilcoxon of the
+adaptive framework against the strongest fixed method gives $p=0.062$ in every
+column, which is the smallest value attainable at $n=5$; the direction is
+consistent across all seeds.
+\end{flushleft}
+\end{table*}

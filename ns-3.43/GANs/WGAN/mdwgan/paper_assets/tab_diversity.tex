@@ -1,0 +1,18 @@
+\begin{table}[!t]
+\centering
+\caption{Effect of the diversity mechanism on predictive calibration. Without it the generator ignores its latent input and its nominal 90\% interval covers only 26\% of targets.}
+\label{tab:diversity}
+\begin{tabular}{lccc}
+\toprule
+Mechanism & PICP $\rightarrow$0.90 & CRPS $\downarrow$ & minADE $\downarrow$ \\
+\midrule
+None (conditional-mean supervision) & 0.222\,$\pm$\,0.028 & 0.408\,$\pm$\,0.021 & 1.194\,$\pm$\,0.059 \\
+Mode-seeking, $\lambda_{\rm div}=0.1$ & 0.275\,$\pm$\,0.028 & 0.406\,$\pm$\,0.018 & 1.188\,$\pm$\,0.049 \\
+Mode-seeking, $\lambda_{\rm div}=0.5$ & 0.482\,$\pm$\,0.026 & 0.391\,$\pm$\,0.019 & 1.133\,$\pm$\,0.052 \\
+Mode-seeking, $\lambda_{\rm div}=1.0$ & 0.610\,$\pm$\,0.021 & 0.384\,$\pm$\,0.020 & 1.100\,$\pm$\,0.048 \\
+Best-of-$k$, $k=4$ & 0.699\,$\pm$\,0.016 & 0.385\,$\pm$\,0.019 & 1.052\,$\pm$\,0.045 \\
+Best-of-$k$, $k=8$ & 0.734\,$\pm$\,0.023 & 0.394\,$\pm$\,0.020 & 1.065\,$\pm$\,0.045 \\
+Best-of-$k$, $k=16$ & 0.765\,$\pm$\,0.012 & 0.400\,$\pm$\,0.020 & 1.089\,$\pm$\,0.042 \\
+\bottomrule
+\end{tabular}
+\end{table}

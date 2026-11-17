@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Discriminator-selection strategies under an otherwise identical framework.}
+\label{tab:selection}
+\begin{tabular}{lcccccc}
+\toprule
+Variant & RMSE & MAE & Mode cov. & CPU (\%) & Latency (s) & Traffic (MB) \\
+\midrule
+\textbf{DQN (ours)} & 0.835\,$\pm$\,0.031 & 0.420\,$\pm$\,0.007 & 0.928\,$\pm$\,0.009 & 17.3\,$\pm$\,0.0 & 2.00\,$\pm$\,0.09 & 17.23\,$\pm$\,0.00 \\
+Random-$k$ & 0.834\,$\pm$\,0.031 & 0.420\,$\pm$\,0.008 & 0.922\,$\pm$\,0.010 & 17.3\,$\pm$\,0.0 & 1.93\,$\pm$\,0.08 & 17.23\,$\pm$\,0.00 \\
+Greedy-by-loss & 0.834\,$\pm$\,0.031 & 0.420\,$\pm$\,0.007 & 0.929\,$\pm$\,0.010 & 17.3\,$\pm$\,0.0 & 1.97\,$\pm$\,0.05 & 17.23\,$\pm$\,0.00 \\
+Round-robin & 0.835\,$\pm$\,0.032 & 0.419\,$\pm$\,0.008 & 0.924\,$\pm$\,0.014 & 17.3\,$\pm$\,0.0 & 1.91\,$\pm$\,0.07 & 17.23\,$\pm$\,0.00 \\
+All discriminators & 0.833\,$\pm$\,0.030 & 0.424\,$\pm$\,0.008 & 0.925\,$\pm$\,0.012 & 28.8\,$\pm$\,0.0 & 2.59\,$\pm$\,0.07 & 28.71\,$\pm$\,0.00 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}\footnotesize
+Mean\,$\pm$\,s.d. over 5 seeds. Significance is a paired Wilcoxon signed-rank test against the full framework, Holm-corrected across variants: $^{*}p<0.05$, $^{**}p<0.01$, $^{***}p<0.001$.
+\end{flushleft}
+\end{table*}
