@@ -1,0 +1,14 @@
+# Regenerable or superseded artefacts -- kept out of the repository.
+# .npz dataset cache, rebuilt by experiments/prewarm.py
+cache/
+*.npz
+# per-run heartbeats
+runs/_progress/
+# runs on per-node-scaled shards, superseded (see docs/REVERSAL.md)
+runs_iidbug/
+tmp/
+# Overleaf bundle, rebuilt from paper/overleaf/
+paper/*.zip
+*.aux
+*.out
+*.synctex.gz
