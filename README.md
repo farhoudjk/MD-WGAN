@@ -156,7 +156,7 @@ If you use this code, please cite:
              under Mobility: A Reinforcement-Learning and Game-Theoretic
              Framework},
   author  = {Jafari Kaleibar, Farhoud and Zaki, Amr M. and Litoiu, Marin},
-  journal = {IEEE Transactions on Parallel and Distributed Systems},
+  journal = {Arxive},
   year    = {2026},
   note    = {Under review}
 }
