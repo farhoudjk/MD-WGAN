@@ -60,7 +60,8 @@ class Config:
     sup_k: int = 8                  # draws for best_of_k
     lambda_div: float = 0.0         # diversity (mode-seeking) regulariser weight
     use_adversarial: bool = True    # False -> supervised-only (no critic feedback)
-    noniid: str = "natural"         # natural | shuffled | segment | lane | iid-split
+    noniid: str = "natural"         # natural | shuffled | segment | lane | iid-split | ngsim | ngsim-shuffled
+    tracks_per_node: int = 40       # ngsim: trajectories per discriminator shard
     source_csv: str = "/home/ubuntu/ns-allinone-3.43/ns-3.43/GANs/WGAN/data.csv"
     mobility_dropout: bool = True   # vehicles leaving coverage lose their update
     deadline_game: bool = False     # allocate epochs under a residence-derived deadline
@@ -115,6 +116,16 @@ def load_cell_data(cfg, node_ids, gid=0):
     heterogeneity survives normalisation; the shipped per-node CSVs are random
     splits scaled per node, which makes every shard N(0,1).
     """
+    if cfg.noniid in ("ngsim", "ngsim-shuffled"):
+        # Full NGSIM release, site-aware shards with equal data per vehicle
+        # (core/ngsim.py).  Node ids are RSU-major, 1-based.
+        from .ngsim import build_ngsim_partitions
+        parts = build_ngsim_partitions(
+            cfg.n_generators, cfg.disc_per_gen, window=cfg.window,
+            test_frac=cfg.test_frac, seed=cfg.seed,
+            tracks_per_node=cfg.tracks_per_node,
+            shuffled=(cfg.noniid == "ngsim-shuffled"))
+        return [parts[nid - 1] for nid in node_ids]
     if cfg.noniid in ("segment", "lane", "iid-split"):
         scheme = "random" if cfg.noniid == "iid-split" else cfg.noniid
         parts = build_spatial_partitions(
@@ -640,7 +651,12 @@ def run_experiment(cfg, progress=False):
     torch.set_num_threads(max(1, int(os.environ.get("MDWGAN_THREADS", "2"))))
     device = torch.device(cfg.device)
 
-    net_model = NetworkModel(NetworkParams(), seed=cfg.seed)
+    # Node index is gid * 16 + local index.  The original 64-slot mobility state
+    # aliases RSU 4+ onto RSUs 0-3; the full-NGSIM runs (up to 8 RSUs) size it
+    # so every vehicle is distinct.  Older configurations keep 64 so their
+    # recorded runs stay exactly reproducible.
+    n_mob = 256 if cfg.noniid.startswith("ngsim") else 64
+    net_model = NetworkModel(NetworkParams(), seed=cfg.seed, n_nodes=n_mob)
     cells = []
     if cfg.method != "mdwgan":
         # Comparison methods share the data, backbone and evaluation protocol;

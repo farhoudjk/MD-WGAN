@@ -81,10 +81,15 @@ class HVSGAN:
         self.cfg = cfg
         self.device = device
         self.rng = np.random.default_rng(cfg.seed)
-        self.data = [build_node_dataset_cached(
-            f"{cfg.data_root}/discriminator_{n}/data.csv", window=cfg.window,
-            test_frac=cfg.test_frac, seed=cfg.seed, max_tracks=cfg.max_tracks)
-            for n in node_ids]
+        if cfg.noniid in ("ngsim", "ngsim-shuffled"):
+            # Full-NGSIM experiments: same shards as the proposed framework.
+            from .trainer import load_cell_data
+            self.data = load_cell_data(cfg, node_ids)
+        else:
+            self.data = [build_node_dataset_cached(
+                f"{cfg.data_root}/discriminator_{n}/data.csv", window=cfg.window,
+                test_frac=cfg.test_frac, seed=cfg.seed, max_tracks=cfg.max_tracks)
+                for n in node_ids]
         nf = self.data[0]["n_features"]
         self.n_vehicles = len(node_ids)
 
@@ -325,10 +330,15 @@ class MDGAN:
         self.cfg, self.device = cfg, device
         self.rng = np.random.default_rng(cfg.seed)
         self.swap_every = swap_every
-        self.data = [build_node_dataset_cached(
-            f"{cfg.data_root}/discriminator_{n}/data.csv", window=cfg.window,
-            test_frac=cfg.test_frac, seed=cfg.seed, max_tracks=cfg.max_tracks)
-            for n in node_ids]
+        if cfg.noniid in ("ngsim", "ngsim-shuffled"):
+            # Full-NGSIM experiments: same shards as the proposed framework.
+            from .trainer import load_cell_data
+            self.data = load_cell_data(cfg, node_ids)
+        else:
+            self.data = [build_node_dataset_cached(
+                f"{cfg.data_root}/discriminator_{n}/data.csv", window=cfg.window,
+                test_frac=cfg.test_frac, seed=cfg.seed, max_tracks=cfg.max_tracks)
+                for n in node_ids]
         nf = self.data[0]["n_features"]
         self.K = len(node_ids)
         self.gen = Generator(cfg.window, nf, noise_dim=cfg.noise_dim).to(device)

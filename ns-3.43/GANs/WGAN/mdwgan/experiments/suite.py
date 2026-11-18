@@ -198,6 +198,52 @@ def knobs(base):
     return out
 
 
+# ---------------------------------------------------------------------------
+# Scalability.  Selection strategies of the proposed framework (DQN, greedy,
+# random), each with the objective-adaptive controller (static policy,
+# balanced weighting) so only the selector differs, plus the related-work
+# baselines at their fixed configurations.  k = 3 throughout
+# (all critics active when the pool has 3).
+#   scale_pool: N_G = 2, local pool 3 / 5 / 8 / 10
+#   scale_rsu : pool 5, N_G = 2 / 4 / 6 / 8
+# The baselines load one shipped per-node dataset per vehicle and only 20
+# exist, so they are limited to N_G * pool <= 20 here.
+# ---------------------------------------------------------------------------
+_SCALE_SEL = ("dqn", "greedy", "random")
+_SCALE_BL = ("hvs-gan", "fedavg-gan", "early-update-mdgan")
+_MAX_BASELINE_NODES = 20
+_SCALE_ALPHA = (0.2, 0.2, 0.2, 0.2, 0.2)
+
+
+def _scale_arms(base, tag, n_gen, pool):
+    out = [_c(base, f"{tag}-{sel}", n_generators=n_gen, disc_per_gen=pool,
+              top_k=min(3, pool), selector=sel, adaptive_cfg="static",
+              objective_weights=_SCALE_ALPHA)
+           for sel in _SCALE_SEL]
+    # Shipped per-node datasets cap the baselines at 20 vehicles; the full
+    # NGSIM shards (noniid="ngsim") have no such limit.
+    if base.noniid.startswith("ngsim") or n_gen * pool <= _MAX_BASELINE_NODES:
+        out += [_c(base, f"{tag}-{m}", n_generators=n_gen, disc_per_gen=pool,
+                   top_k=min(3, pool), method=m) for m in _SCALE_BL]
+    return out
+
+
+def scale_pool(base):
+    return [a for pool in (3, 5, 8, 10) for a in _scale_arms(base, f"pool{pool}", 2, pool)]
+
+
+def scale_rsu(base):
+    return [a for g in (2, 4, 6, 8) for a in _scale_arms(base, f"rsu{g}", g, 5)]
+
+
+def partition(base):
+    """Full-NGSIM partitioning control: site-aware shards vs the same tracks
+    redealt uniformly within each RSU (statistically identical shards)."""
+    best = dict(selector="greedy", sup_mode="best_of_k")
+    return [_c(base, "part-site", noniid="ngsim", **best),
+            _c(base, "part-shuffled", noniid="ngsim-shuffled", **best)]
+
+
 SUITES = {
     "knobs": knobs,
     "adaptive": adaptive,
@@ -208,4 +254,7 @@ SUITES = {
     "baseline": selection_baselines,
     "sensitivity": sensitivity,
     "noniid": noniid,
+    "scale_pool": scale_pool,
+    "scale_rsu": scale_rsu,
+    "partition": partition,
 }
